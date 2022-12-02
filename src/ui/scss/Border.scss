@@ -1,73 +1,43 @@
-// out:false
+@mixin getBorder($value) {
+  #{$value}: {
+    width: 1px;
+    style: solid;
+    color: var(--color-gray);
+  }
+}
 
+.border {
+  @include getBorder('border');
 
-.bd {
-  &-right {
-    border-right: 1px solid #E2E8F0;
+  &-top {
+    @include getBorder('border-top');
   }
 
   &-left {
-    border-left: 1px solid #E2E8F0;
+    @include getBorder('border-left');
   }
 
-  &-top {
-    border-top: 1px solid #E2E8F0;
+  &-right {
+    @include getBorder('border-right');
   }
 
   &-bottom {
-    border-bottom: 1px solid #E2E8F0;
+    @include getBorder('border-bottom');
   }
 
-  &-all {
-    border: 1px solid #E2E8F0;
-  }
-
-  &-white {
-    border-color: #fff;
-  }
-
-  &-black {
-    border-color: #000;
-  }
-
-  &-primary {
-    border-color: var(--color-primary);
-  }
-
-  &-blue {
-    border-color: var(--color-blue);
-  }
-
-  &-red {
-    border-color: var(--color-red);
-  }
-
-  &-green {
-    border-color: var(--color-green);
-  }
-
-  &-yellow {
-    border-color: var(--color-yellow);
-  }
-
-  &-text {
-    border-color: var(--color-text);
-  }
-
-  &-icon {
-    border-color: var(--color-icon);
+  &-none {
+    border: none;
   }
 }
 
+.radius {
+  @for $i from 1 through 10 {
+    &-#{$i} {
+      border-radius: #{calc(4px * $i)};
+    }
+  }
 
-.brs-1 {
-	border-radius: var(--radius-large);
-}
-
-.brs-2 {
-	border-radius: var(--radius-middle);
-}
-
-.brs-3 {
-	border-radius: var(--radius-small);
+  &-max {
+    border-radius: 50%;
+  }
 }

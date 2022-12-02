@@ -1,8 +1,5 @@
-// out:false
-
 .flex {
 	display: flex;
-
 
 	&-align {
 
@@ -63,11 +60,26 @@
 		}
 	}
 
+	&-column {
+		flex-direction: column;
+	}
+
 	&-grow {
 		flex-grow: 1;
 	}
 
 	&-wrap {
 		flex-wrap: wrap;
+	}
+}
+
+.gap {
+	@include AddMedia {
+		@for $i from 0 through 10 {
+			&-#{$i} {
+				gap     : #{calc(4px * $i)};
+				grid-gap: #{calc(4px * $i)}
+			}
+		}
 	}
 }

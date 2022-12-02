@@ -1,20 +1,14 @@
-// out: false
-
-
 :root {
   --section-width     : calc(100vw - 30px);
-  --section-gap-top   : 20px;
-  --section-gap-bottom: 20px;
+  --section-gap-top   : 35px;
+  --section-gap-bottom: 35px;
 }
-
 
 .container {
   width    : 100%;
   max-width: var(--section-width);
   margin   : 0 auto;
 }
-
-
 
 dialog,
 section,
@@ -28,16 +22,18 @@ section {
   padding-bottom: var(--section-gap-bottom);
 }
 
-
 @media (min-width: $md) {
   :root {
-    --section-width: #{$container_md};
+    --section-width     : #{$container_md};
+    --section-gap-top   : 50px;
+    --section-gap-bottom: 50px;
   }
 }
 
-
 @media (min-width: $lg) {
   :root {
-    --section-width: #{$container_lg};
+    --section-width     : #{$container_lg};
+    --section-gap-top   : 70px;
+    --section-gap-bottom: 70px;
   }
 }

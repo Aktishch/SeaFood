@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="autor" content="Студия КИТ">
+    <title><%= data.title %></title>
+</head>
+<body>
+
+    <header class="header flex flex-align-center flex-justify-between gap-5 sticky z-3 bg-l2 py-2 duration-3 -header-">
+        <button class="burger btn btn--link btn--primary d-lg-none -burger-">
+            <svg class="icon text-h1">
+                <use xlink:href="img/icons.svg#burger" />
+            </svg>
+        </button>
+        <a class="header__logo btn btn--link" href="/">
+            <img class="w-100" src="img/logo.png" alt="">
+        </a>
+        <nav class="nav d-none d-lg-flex flex-align-center flex-justify-between gap-5 w-100">
+            <a class="text-body-1 link-hover" href="">About Event</a>
+            <a class="text-body-1 link-hover" href="">Exhibit</a>
+            <a class="text-body-1 link-hover" href="">Visit</a>
+            <a class="text-body-1 link-hover" href="">Business Program</a>
+            <a class="text-body-1 link-hover" href="">Media</a>
+            <a class="text-body-1 link-hover" href="">Centre Contacts</a>
+        </nav>
+        <a class="text-body-1 text--bold link-hover d-none d-md-block" href="tel: +7 (495) 215 06 75">+7 (495) 215 06 75</a>
+        <div class="language relative" data-toggle-cover>
+            <button class="btn btn--link" data-toggle-link>
+                <img class="icon text-h6 mr-2" src="img/en.svg" alt="">
+                <svg class="language__arrow icon fade-60 text-small-2">
+                    <use xlink:href="./img/icons.svg#arrow-bottom" />
+                </svg>
+            </button>
+            <div class="language__items absolute" data-toggle-content data-toggle-height="true" data-toggle-static="true">
+                <div class="flex flex-column gap-4 bg-l3 shadow radius-3 p-5">
+                    <a class="flex flex-align-center link-hover" href="">
+                        <img class="icon text-h6 mr-2" src="img/en.svg" alt="">
+                        <div class="text-body-0 text--demibold">english</div>
+                    </a>
+                    <a class="flex flex-align-center link-hover" href="">
+                        <img class="icon text-h6 mr-2" src="img/en.svg" alt="">
+                        <div class="text-body-0 text--demibold">english</div>
+                    </a>
+                    <a class="flex flex-align-center link-hover" href="">
+                        <img class="icon text-h6 mr-2" src="img/en.svg" alt="">
+                        <div class="text-body-0 text--demibold">english</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile flex flex-column fixed z-3 w-100 color-white ease duration-3" data-mobile>
+        <div class="mobile__head flex flex-align-center flex-justify-between gap-2 relative bg-dark-blue py-3 px-4 ease duration-5 delay-3">
+            <a class="mobile__logo btn btn--link" href="/">
+                <img class="w-100" src="img/logo-white.png" alt="">
+            </a>
+            <a class="text-body-2 link-hover" href="tel: +7 (495) 215 06 75">+7 (495) 215 06 75</a>
+            <button class="btn btn--link -close-">
+                <svg class="icon color-white text-subtitle-2">
+                    <use xlink:href="img/icons.svg#close" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile__nav flex flex-column relative gap-4 p-4 ease duration-9 delay-5">
+            <a class="text-body-0 link-hover w-max" href="">About Event</a>
+            <a class="text-body-0 link-hover w-max" href="">Exhibit</a>
+            <a class="text-body-0 link-hover w-max" href="">Visit</a>
+            <a class="text-body-0 link-hover w-max" href="">Business Program</a>
+            <a class="text-body-0 link-hover w-max" href="">Media</a>
+            <a class="text-body-0 link-hover w-max" href="">Centre Contacts</a>
+        </div>
+        <div class="mobile__footer relative mt-auto pb-8 ease duration-5 delay-9">
+            <div class="social flex flex-align-center flex-justify-center gap-4">
+                <a class="social__link btn btn--white btn--light p-0 radius-max" href="">
+                    <svg class="icon text-subtitle-1">
+                        <use xlink:href="img/icons.svg#tg" />
+                    </svg>
+                </a>
+                <a class="social__link btn btn--white btn--light p-0 radius-3" href="">
+                    <svg class="icon text-subtitle-1">
+                        <use xlink:href="img/icons.svg#in" />
+                    </svg>
+                </a>
+                <a class="social__link btn btn--white btn--light p-0 radius-3" href="">
+                    <svg class="icon text-subtitle-1">
+                        <use xlink:href="img/icons.svg#inst" />
+                    </svg>
+                </a>
+                <a class="social__link btn btn--white btn--light p-0 radius-3" href="">
+                    <svg class="icon text-subtitle-1">
+                        <use xlink:href="img/icons.svg#fb" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>

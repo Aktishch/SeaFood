@@ -1,7 +1,3 @@
-// out: false
-
-
-
 .form {
 	&-field {
 		display      : block;
@@ -30,34 +26,29 @@
 
 
 	&-input {
-		outline  : none !important;
-		display  : flex;
-		height   : 40px;
-		position : relative;
-		padding  : calc(var(--spacing) * 2) calc(var(--spacing) * 4);
-		flex-grow: 1;
-
-
-
-		cursor    : inherit;
-		outline   : none;
-		appearance: none;
-
-		font-size  : 14px;
-		font-family: var(--font-base);
-		color      : var(--color-text);
-
+		outline         : none !important;
+		display         : flex;
+		height          : 52px;
+		position        : relative;
+		padding         : calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+		flex-grow       : 1;
+		cursor          : inherit;
+		outline         : none;
+		appearance      : none;
+		font-size       : 16px;
+		font-family     : var(--font-base);
+		color           : var(--color-text);
 		background-color: var(--bg3);
 		border          : 1px solid var(--color-text-10);
 
 		&:first-of-type {
-			border-start-start-radius: var(--radius-small);
-			border-end-start-radius  : var(--radius-small);
+			border-start-start-radius: 8px;
+			border-end-start-radius  : 8px;
 		}
 
 		&:last-of-type {
-			border-end-end-radius  : var(--radius-small);
-			border-start-end-radius: var(--radius-small);
+			border-end-end-radius  : 8px;
+			border-start-end-radius: 8px;
 		}
 
 		&:not(:first-of-type) {
@@ -66,7 +57,7 @@
 
 
 		&:focus {
-			border-color: var(--color-icon);
+			border-color: var(--color-text-40);
 			z-index     : 2;
 		}
 

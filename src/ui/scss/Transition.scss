@@ -1,0 +1,17 @@
+@each $value in $transition {
+    .#{$value} {
+        transition-timing-function: #{$value};
+    }
+}
+
+@for $i from 1 through 10 {
+    .duration-#{$i} {
+        transition-duration: #{calc($i / 10) + s};
+    }
+}
+
+@for $i from 1 through 10 {
+    .delay-#{$i} {
+        transition-delay: #{calc($i / 10) + s};
+    }
+}

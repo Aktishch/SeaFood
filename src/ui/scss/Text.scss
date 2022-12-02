@@ -1,5 +1,3 @@
-// out: false
-
 @mixin Text {
 
 	&-h1 {
@@ -122,6 +120,7 @@
 	@include AddMedia {
 		@include Text;
 	}
+
 	@include AddMedia {
 		@include TextMod;
 	}
@@ -144,9 +143,8 @@
 				height       : 6px;
 				border-radius: 50%;
 				margin-right : calc(var(--spacing) * 3);
-				background   : var(--color-primary);
-
-				margin-top: 0.5em;
+				background   : var(--color-text);
+				margin-top   : 0.5em;
 			}
 		}
 	}

@@ -1,8 +1,7 @@
-// out:false
-
 
 .link-hover {
   cursor: pointer;
+  text-underline-offset: 4px;
 
   @media(hover) {
     &:hover {
@@ -22,4 +21,8 @@
 
     }
   }
+}
+
+.cursor {
+  cursor: pointer;
 }

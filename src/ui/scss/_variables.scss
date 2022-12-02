@@ -1,8 +1,27 @@
-// out: false
+$colors: ('primary': #EF713A,
+    'black': #000000,
+    'text': #20162C,
+    'white': #ffffff,
+    'gray': #b2b2b2,
+    'blue': #0170E5,
+    'light-blue': #49DDFD,
+    'dark-blue': #02438F, );
+
+$position: 'static',
+'sticky',
+'relative',
+'absolute',
+'fixed';
+
+$transition: 'ease',
+'ease-in',
+'ease-out',
+'ease-in-out',
+'linear';
 
 $container_md: 650px;
-$container_lg: 1024px;
+$container_lg: 1230px;
 
-$sm   : 425.98px;
-$md   : $container_md + 29.98px;
-$lg   : $container_lg + 29.98px;
+$sm : 425.98px;
+$md : $container_md+29.98px;
+$lg : $container_lg+29.98px;

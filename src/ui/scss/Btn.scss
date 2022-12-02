@@ -1,5 +1,3 @@
-// out: false
-
 @mixin btnColor($name, $accent:#fff) {
 	&--#{$name} {
 		--btn-color      : var(--color-#{$name});
@@ -30,14 +28,14 @@
 	align-items    : center;
 	justify-content: center;
 
-	--size       : 40px;
+	--size       : 52px;
 	height       : var(--size);
 	padding      : 0 calc(var(--size) / 2);
-	border-radius: var(--radius-small);
+	border-radius: 8px;
 
-	font-size  : 14px;
+	font-size  : 16px;
 	font-family: var(--font-base);
-	font-weight: bold;
+	font-weight: 600;
 
 	transition: .2s ease;
 
@@ -95,7 +93,7 @@
 
 	&--white {
 		--btn-color      : #fff;
-		--btn-color-light: rgba(255, 255, 255, 0.6);
+		--btn-color-light: rgba(255, 255, 255, 0.2);
 		--btn-text       : var(--color-text);
 
 		@media (hover) {

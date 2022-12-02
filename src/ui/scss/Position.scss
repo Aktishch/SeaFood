@@ -1,0 +1,13 @@
+@each $value in $position {
+    .#{$value} {
+        position: #{$value};
+    }
+}
+
+.z {
+    @for $i from 0 to 10 {
+        &-#{$i} {
+            z-index: var(--z-#{$i});
+        }
+    }
+}

@@ -19,6 +19,11 @@ $transition: 'ease',
 'ease-in-out',
 'linear';
 
+$overflow: 'visible',
+'hidden',
+'scroll',
+'auto';
+
 $container_md: 650px;
 $container_lg: 1230px;
 

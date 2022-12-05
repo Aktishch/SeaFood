@@ -1,115 +1,33 @@
-
 .card {
-	background    : var(--bg3);
-	box-sizing    : border-box;
-	border-radius : var(--radius-middle);
-	position      : relative;
-	display       : flex;
-	flex-direction: column;
+	display         : flex;
+	flex-direction  : column;
+	position        : relative;
+	background-color: var(--color-white);
+	box-shadow      : 0px 2px 4px rgba(0, 0, 0, 0.06);
+	border-radius   : 24px;
+	overflow        : hidden;
 
-
-	&--shadow {
-		box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.05);
+	transition: {
+		duration       : 0.2s;
+		timing-function: ease;
 	}
-
-	&--contur {
-		border: 1px solid var(--color-text-20);
-	}
-
-	&-action {
-		transition: .3s ease;
-
-		@media(hover) {
-			&:hover {
-				box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
-			}
-		}
-
-		&:focus,
-		&:active {
-			box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
-		}
-
-		&:active {
-			transform: translateY(2px);
-		}
-	}
-
-
-
-	&-img {
-		border-radius: var(--radius-middle) var(--radius-middle) 0 0;
-		overflow     : hidden;
-		position     : relative;
-		max-height   : 278px;
-		min-height   : 128px;
-		overflow     : hidden;
-		width        : 100%;
-
-		&:before {
-			content       : '';
-			display       : block;
-			width         : 100%;
-			height        : 100%;
-			padding-bottom: calc(100% * 3 / 4);
-		}
-
-		img {
-			position  : absolute;
-			left      : 0;
-			top       : 0;
-			width     : 100%;
-			height    : 100%;
-			object-fit: cover;
-		}
-	}
-
 
 	&-content {
-		padding       : 16px;
-		flex-grow     : 1;
-		display       : flex;
-		flex-direction: column;
-		align-items   : flex-start;
-	}
+		display: flex;
 
-	&-top-control {
-		position: absolute;
-		top     : 0;
-		left    : 0;
-		width   : 100%;
-		z-index : 2;
-	}
-
-	&-bottom-control {
-		position: absolute;
-		bottom  : 0;
-		left    : 0;
-		width   : 100%;
-		z-index : 2;
-	}
-}
-
-[data-theme="dark"] .card {
-	box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
-
-	&-action {
-		transition: .3s ease;
-
-		@media(hover) {
-			&:hover {
-				box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.35);
-			}
-		}
-
-		&:focus,
-		&:active {
-			box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.35);
-		}
-
-		&:active {
-			transform: translateY(2px);
+		flex: {
+			direction: column;
+			grow     : 1;
 		}
 	}
 
+	@media(hover) {
+		&:hover {
+			box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		&:hover &-arrow {
+			transform: scale(1.4) translate(5px, -5px);
+		}
+	}
 }

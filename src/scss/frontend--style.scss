@@ -104,10 +104,9 @@ body {
 	bottom          : 0;
 	right           : 0;
 	max-width       : 375px;
-	background-color: var(--color-blue-90);
+	background-color: var(--color-white-90);
 	backdrop-filter : blur(4px);
 	box-shadow      : 0 0 0 100vw var(--color-black-50);
-	overflow        : auto;
 
 	&__logo {
 		width: 90px;
@@ -240,6 +239,25 @@ body {
 	}
 }
 
+.cookies {
+	bottom: 0;
+	left  : 0;
+	right : 0;
+}
+
+.page-head {
+	min-height: 325px;
+
+	&__pagination {
+		top : 0;
+		left: 0;
+	}
+
+	&__btn {
+		width: 200px;
+	}
+}
+
 .started {
 	min-height: 780px;
 
@@ -270,13 +288,11 @@ body {
 
 .forum {
 	&__video {
-		height  : 350px;
-		overflow: hidden;
+		height: 350px;
 	}
 
 	&__item {
-		height  : 300px;
-		overflow: hidden;
+		height: 300px;
 	}
 
 	&__content {
@@ -301,19 +317,38 @@ body {
 }
 
 .expo {
-	overflow: hidden;
-
-	&__subtitle {
-		margin-bottom: 100px;
-	}
-
 	&-swiper {
-		overflow: visible;
+
+		&::before,
+		&::after {
+			content       : '';
+			position      : absolute;
+			top           : 0;
+			bottom        : 0;
+			width         : 420px;
+			height        : 100%;
+			z-index       : var(--z-1);
+			pointer-events: none;
+		}
+
+		&::before {
+			left      : -420px;
+			background: linear-gradient(-90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
+		}
+
+		&::after {
+			right     : -420px;
+			background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
+		}
+
 	}
 
 	&-slide {
-		overflow  : hidden;
 		min-height: 300px;
+
+		&--blue {
+			background-color: #0066A2;
+		}
 	}
 
 	&__shildik {
@@ -335,25 +370,199 @@ body {
 		height: 60px;
 	}
 
+	&-pagination {
+		& .swiper-pagination-bullet {
+			width           : 12px;
+			height          : 12px;
+			border-radius   : 50%;
+			background-color: var(--color-blue-40);
+			margin          : 0 4px;
+
+			&.swiper-pagination-bullet-active {
+				background-color: var(--color-blue);
+			}
+		}
+	}
+
 	@media(hover) {
 		&-slide:hover {
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 		}
 	}
 
-	@media(max-width: $lg) {
-		&__subtitle {
-			margin-bottom: 70px;
-		}
-	}
-
 	@media(max-width: $md) {
-		&__subtitle {
-			margin-bottom: 50px;
+		&-swiper {
+
+			&::before,
+			&::after {
+				display: none;
+			}
 		}
 
 		&-slide {
 			min-height: 270px;
+		}
+	}
+}
+
+.water-block {
+	background: linear-gradient(254.79deg, rgba(0, 0, 0, 0) 39.31%, rgba(0, 0, 0, 0.4) 100%), #005B95;
+
+	&__item {
+		background     : linear-gradient(107.73deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 57.04%);
+		backdrop-filter: blur(6px);
+	}
+
+	&__icon {
+		font-size    : 86px;
+		margin-bottom: 78px;
+	}
+
+	&__text {
+		font-size: 42px;
+	}
+
+	&__info {
+		line-height: 1.3;
+		font-weight: 300;
+	}
+
+	@media(max-width: $lg) {
+		&__icon {
+			font-size    : 60px;
+			margin-bottom: 20px;
+		}
+
+		&__text {
+			font-size: 22px;
+		}
+	}
+
+	@media(max-width: $md) {
+		&__item {
+			flex-direction: row;
+		}
+
+		&__icon {
+			font-size    : 40px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.photos {
+
+	&::before,
+	&::after {
+		content       : '';
+		position      : absolute;
+		top           : 0;
+		bottom        : 0;
+		width         : 315px;
+		height        : 100%;
+		z-index       : var(--z-1);
+		pointer-events: none;
+	}
+
+	&::before {
+		left      : 0;
+		background: linear-gradient(-90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
+	}
+
+	&::after {
+		right     : 0;
+		background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
+	}
+
+	&-wrapper {
+		transition-timing-function: linear !important;
+	}
+
+	&__pic {
+		height: 330px;
+	}
+
+	@media(max-width: $lg) {
+
+		&::before,
+		&::after {
+			width: 150px;
+		}
+
+		&__pic {
+			height: 250px;
+		}
+	}
+
+	@media(max-width: $md) {
+
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		&__pic {
+			height: 200px;
+		}
+	}
+}
+
+.news {
+	&__pic {
+		min-width: 360px;
+	}
+
+	&__content {
+		max-width: 335px;
+	}
+
+	&__gradient {
+		background: linear-gradient(180deg, rgba(32, 22, 44, 0) 34.86%, #20162C 64.38%);
+	}
+
+	&__btn {
+		width: 235px;
+	}
+
+	@media(max-width: $lg) {
+		&__gradient {
+			height: 500px;
+		}
+
+		&__pic {
+			min-width: 280px;
+		}
+
+		&__content {
+			max-width: 100%;
+		}
+	}
+
+	@media(max-width: $md) {
+		&__card {
+			flex-direction: column;
+			align-items   : flex-start;
+		}
+
+		&__pic {
+			width    : 100%;
+			min-width: auto;
+		}
+	}
+}
+
+.partners {
+	&__card {
+		min-height: 300px;
+	}
+
+	&__btn {
+		width: 235px;
+	}
+
+	@media(max-width: $lg) {
+		&__card {
+			min-height: 150px;
 		}
 	}
 }

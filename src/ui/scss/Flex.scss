@@ -64,6 +64,10 @@
 		flex-direction: column;
 	}
 
+	&-row {
+		flex-direction: row;
+	}
+
 	&-grow {
 		flex-grow: 1;
 	}

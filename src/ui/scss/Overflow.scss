@@ -1,0 +1,7 @@
+.overflow {
+    @each $value in $overflow {
+        &-#{$value} {
+            overflow: #{$value};
+        }
+    }
+}

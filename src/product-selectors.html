@@ -1,7 +1,7 @@
 <% var data = {
 
   title: 'Product selectors',
-  status: true
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
 
 } %>
 
@@ -10,7 +10,7 @@
 <%= _.template(require('./html-includes/page-head.html').default)({data}) %>
 
 <section class="page-block">
-  <div class="grid grid-spacing-4 grid-spacing-lg-7">
+  <div class="grid grid-spacing-4 grid-spacing-lg-7 mb-5 mb-md-10">
     <div class="grid-col-12 grid-col-md-6 grid-col-lg-4">
       <div class="card radius-6 waved h-100">
         <div class="pic pic--rect-x progress-container">
@@ -131,6 +131,9 @@
       </div>
     </div>
   </div>
+
+  <%= _.template(require('./html-includes/banner.html').default)() %>
+
 </section>
 
 <%= _.template(require('./html-includes/footer.html').default)({data}) %>

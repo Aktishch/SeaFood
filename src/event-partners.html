@@ -1,0 +1,67 @@
+<% var data = {
+
+  title: 'Event partners',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <%= _.template(require('./html-includes/banner.html').default)() %>
+
+    <% var partners = [
+    {
+      img: '1',
+      name: 'GENERAL PARTNER'
+    },
+    {
+      img: '2',
+      name: 'OFFICIAL PARTNER'
+    },
+    {
+      img: '3',
+      name: 'PARTNER BANK'
+    },
+    {
+      img: '4',
+      name: 'STRATEGIC PARTNER'
+    },
+    {
+      img: '5',
+      name: 'BUSINESS PARTNER'
+    },
+    {
+      img: '6',
+      name: 'PARTNER'
+    },
+    {
+      img: '7',
+      name: 'REGISTRATION AREA PARTNER'
+    },
+    {
+      img: '8',
+      name: 'BUSINESS PROGRAMME PARTNER'
+    },
+    {
+      img: '9',
+      name: 'TRANSFER PARTNER'
+    }
+  ] %>
+
+  <div class="partners mt-5 mt-md-10">
+    <div class="grid grid-spacing-3 grid-spacing-md-7">
+      <% for (var i = 0; i < partners.length; i++) { %>
+        <div class="grid-col-6 grid-col-lg-4">
+          <%= _.template(require('./html-includes/card-partner.html').default)({partners, i}) %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

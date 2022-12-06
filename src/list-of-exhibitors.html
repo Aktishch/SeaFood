@@ -1,0 +1,29 @@
+<% var data = {
+
+  title: 'List of exhibitors 2022',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="flex flex-wrap flex-align-center flex-justify-between gap-4 gap-md-8 mb-5 mb-md-10">
+    <button class="btn btn--dark-blue btn--fill flex-grow">
+      <span class="text--uppercase text-small-1 text-md-body-1 text--demibold">SEAFOOD EXPO RUSSIA 2019 EXHIBITORS</span>
+    </button>
+    <button class="btn btn--dark-blue btn--fill flex-grow">
+      <span class="text--uppercase text-small-1 text-md-body-1 text--demibold">SEAFOOD EXPO RUSSIA 2018 EXHIBITORS</span>
+    </button>
+  </div>
+
+  <iframe class="overflow-hidden w-100 mb-5 mb-md-10" name="wm-iframe" frameborder="0" src="https://lk.seafoodexporussia.com/lists/y2022/company/index-en" scrolling="auto" style="height: 2200px;"></iframe>
+
+  <button class="btn btn--primary btn--contur color-text mx-auto">Seafood EXPO Russia’22 overview</button>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

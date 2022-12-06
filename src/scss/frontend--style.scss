@@ -254,7 +254,7 @@ body {
 	}
 
 	&__btn {
-		width: 200px;
+		width: 205px;
 	}
 }
 
@@ -564,5 +564,152 @@ body {
 		&__card {
 			min-height: 150px;
 		}
+	}
+}
+
+.banner {
+	background: #20162C linear-gradient(269.69deg, rgba(2, 67, 143, 0.9) 0%, rgba(2, 67, 143, 0) 50.27%);
+
+	&__img {
+		max-width: 94px;
+	}
+
+	@media(max-width: $md) {
+		& {
+			flex-direction: column;
+			text-align    : center;
+		}
+	}
+}
+
+.venue {
+	&::after {
+		content         : '';
+		width           : 420px;
+		height          : 420px;
+		border-radius   : 50%;
+		background-color: var(--color-dark-blue);
+		position        : absolute;
+		top             : -100px;
+		right           : -100px;
+
+	}
+
+	&__img {
+		max-width: 500px;
+	}
+
+	&-card {
+		&__pic {
+			max-width: 600px;
+			height   : 340px;
+		}
+
+		&__items {
+			border-bottom: {
+				width: 1px;
+				style: dashed;
+				color: var(--color-gray);
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	@media(max-width: $lg) {
+		& {
+			flex-direction: column;
+			align-items   : flex-end;
+
+			&::after {
+				background-color: var(--color-dark-blue-10);
+				right           : auto;
+				left            : -50px;
+				top             : -50px;
+				width           : 200px;
+				height          : 200px;
+			}
+		}
+
+		&-card {
+			flex-direction: column;
+			align-items   : flex-start;
+
+			&__pic {
+				max-width: 100%;
+			}
+		}
+	}
+
+	@media(max-width: $md) {
+		&-card {
+			&__pic {
+				height: 200px;
+			}
+		}
+	}
+}
+
+.contacts {
+	&-card {
+		&__img {
+			width: 150px;
+		}
+
+		&__icon {
+			min-width       : 40px;
+			width           : 40px;
+			height          : 40px;
+			background-color: #8199B5;
+		}
+	}
+
+	&-personal {
+		margin-bottom: 60px;
+
+		&__pic {
+			min-width: 130px;
+			width    : 130px;
+		}
+
+		&__icon {
+			min-width       : 24px;
+			width           : 24px;
+			height          : 24px;
+			background-color: #8199B5;
+		}
+	}
+
+	@media(max-width: $md) {
+		&-card {
+			flex-direction: column;
+
+			&__icon {
+				min-width: 30px;
+				width    : 30px;
+				height   : 30px;
+			}
+		}
+
+		&-personal {
+			margin-bottom: 40px;
+
+			&__card {
+				border-radius: 8px;
+			}
+
+			&__pic {
+				min-width: 80px;
+				width    : 80px;
+			}
+		}
+	}
+}
+
+.plan {
+	&__btn {
+		width: 280px;
 	}
 }

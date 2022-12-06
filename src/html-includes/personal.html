@@ -1,0 +1,35 @@
+<div class="contacts-personal">
+  <div class="grid grid-spacing-4 grid-spacing-md-8">
+    <% for (var i=0; i < personal.length; i++) { %>
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-<%= personal[i].img %>.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">
+              <%= personal[i].name %>
+            </div>
+            <div class="text-body-2 text-md-body-1 mb-2 mb-md-3">
+              <%= personal[i].work %>
+            </div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="mailto: <%= personal[i].email %>">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  <%= personal[i].email %>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>

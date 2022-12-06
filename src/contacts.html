@@ -1,0 +1,594 @@
+<% var data = {
+
+  title: 'Contacts',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="contacts-card card flex-align-center flex-row gap-5 gap-md-10 radius-6 p-5 p-md-8 mb-5 mb-md-9">
+    <img class="contacts-card__img" src="img/esg.png" alt="">
+    <div class="card-content">
+      <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-5">EXPO SOLUTIONS GROUP — <span class="text--regular">EXHIBITION ORGANIZER</span></div>
+      <div class="flex flex-wrap flex-align-center gap-4 gap-lg-8 mb-4 mb-lg-5">
+        <a class="flex flex-align-center link-hover" href="tel: +7(499)922-44-17">
+          <div class="contacts-card__icon flex flex-align-center flex-justify-center color-white radius-2 mr-2">
+            <svg class="icon text-h6 text-md-h3">
+              <use xlink:href="img/icons.svg#phone" />
+            </svg>
+          </div>
+          <div class="text-body-1 text-md-subtitle-2 text--regular">+7(499)922-44-17</div>
+        </a>
+        <a class="flex flex-align-center link-hover" href="tel: +7(495)215-06-75">
+          <div class="contacts-card__icon flex flex-align-center flex-justify-center color-white radius-2 mr-2">
+            <svg class="icon text-h6 text-md-h3">
+              <use xlink:href="img/icons.svg#phone" />
+            </svg>
+          </div>
+          <div class="text-body-1 text-md-subtitle-2 text--regular">+7(495)215-06-75</div>
+        </a>
+      </div>
+      <div class="flex flex-wrap flex-align-center gap-4 gap-lg-8">
+        <a class="flex flex-align-center link-hover" href="mailto: INFO@RUSFISHEXPO.COM">
+          <div class="contacts-card__icon flex flex-align-center flex-justify-center color-white radius-2 mr-2">
+            <svg class="icon text-h6 text-md-h3">
+              <use xlink:href="img/icons.svg#email" />
+            </svg>
+          </div>
+          <div class="text-body-1 text-md-subtitle-2 text--regular">INFO@RUSFISHEXPO.COM</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">EXHIBITION MANAGEMENT</div>
+
+  <% var personal = [
+    {
+      img: '1',
+      email: 'i.fetisoff@rusfishexpo.com',
+      name: 'Ivan Fetisov',
+      work: 'CEO'
+    },
+    {
+      img: '2',
+      email: 'z.fetisova@rusfishexpo.com',
+      name: 'Zarina Fetisova',
+      work: 'Deputy General Director'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">SALES TEAM</div>
+
+  <% var personal = [
+    {
+      img: '3',
+      email: 't.kamaev@rusfishexpo.com',
+      name: 'Timur Kamaev',
+      work: 'Head of sales department'
+    },
+    {
+      img: '4',
+      email: 'o.ryabceva@rusfishexpo.com',
+      name: 'Olga Ryabtseva',
+      work: 'Sales manager'
+    },
+    {
+      img: '5',
+      email: 'm.demchenko@rusfishexpo.com',
+      name: 'Maryana Demchenko',
+      work: 'Sales manager'
+    },
+    {
+      img: '6',
+      email: 'k.aleksandrov@rusfishexpo.com',
+      name: 'Kirill Aleksandrov',
+      work: 'Sales manager'
+    },
+    {
+      img: '7',
+      email: 'k.saveleva@rusfishexpo.com',
+      name: 'Ksenia Saveleva',
+      work: 'Sales manager'
+    }
+  ] %>
+  
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">TECHNICAL DEPARTMENT</div>
+
+  <% var personal = [
+    {
+      img: '8',
+      email: 'a.moroz@rusfishexpo.com',
+      name: 'Alexey Moroz',
+      work: 'Head of technical department'
+    },
+    {
+      img: '9',
+      email: 'k.aleksandrov@rusfishexpo.com',
+      name: 'Maria Ovchinnikova',
+      work: 'Technical manager'
+    }
+  ] %>
+  
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">BUSINESS PROGRAM</div>
+
+  <% var personal = [
+    {
+      img: '10',
+      email: 'e.gritsenko@rusfishexpo.com',
+      name: 'Ekaterina Gritsenko',
+      work: 'Business Program Director'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">ADVERTISING & PR</div>
+
+  <% var personal = [
+    {
+      img: '11',
+      email: 'y.frolova@rusfishexpo.com',
+      name: 'Yana Frolova',
+      work: 'Head of Marketing'
+    },
+    {
+      img: '12',
+      email: 'a.morozov@rusfishexpo.com',
+      name: 'Aleksander Morozov',
+      work: 'PR manager'
+    }
+  ] %>
+  
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">TRAVEL PARTNER</div>
+
+  <div class="contacts-personal">
+    <div class="grid grid-spacing-4 grid-spacing-md-8">
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-13.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Tatiana Solonenko</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (495) 231-33-99">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (495) 231-33-99, ext. 719
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (926) 236-33-65">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (926) 236-33-65
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: solonenko@cbtc.ru">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  solonenko@cbtc.ru
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-0.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Nikolai Khomenko</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (495) 231-33-99">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (495) 231-33-99, ext. 501
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: khomenkonn@cbtc.ru">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  khomenkonn@cbtc.ru
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-14.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Ivan Ivanov</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (495) 231-33-99">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (495) 231-33-99, ext. 232
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (926) 232-52-92">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (926) 232-52-92
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: ivanovia@cbtc.ru">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  ivanovia@cbtc.ru
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">LOGISTICS PARTNER</div>
+
+  <div class="contacts-personal">
+    <div class="grid grid-spacing-4 grid-spacing-md-8">
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-15.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">TLK “Rail Service” LLC</div>
+            <div class="text-body-2 text-md-body-1 mb-2 mb-md-3">
+              Primorskyi krai, Vladivostok
+            </div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7(914)792-58-92">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7(914)792-58-92
+                </div>
+              </a>
+              <div class="flex flex-wrap flex-align-center gap-5">
+                <a class="flex flex-align-center link-hover w-max" href="mailto: oper1@tlkrs.ru">
+                  <div
+                    class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                    <svg class="icon text-body-0">
+                      <use xlink:href="img/icons.svg#email" />
+                    </svg>
+                  </div>
+                  <div class="text-small-1 text-md-body-1">
+                    oper1@tlkrs.ru
+                  </div>
+                </a>
+                <a class="flex flex-align-center link-hover w-max" href="www.tlkrs.ru">
+                  <div
+                    class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                    <svg class="icon text-body-0">
+                      <use xlink:href="img/icons.svg#world-fill" />
+                    </svg>
+                  </div>
+                  <div class="text-small-1 text-md-body-1 text--underline">
+                    www.tlkrs.ru
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-spacing-4 grid-spacing-md-8">
+    <div class="grid-col-lg-6">
+      <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-2">PARTNER IN TURKEY</div>
+      <div class="text-body-2 text-md-body-0 text-lg-subtitle-1 text--regular text--uppercase mb-5 mb-md-10">KENT FORUM FAIR ORG.</div>
+      <div class="contacts-personal">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-16.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Ms. Serpil Coşkun</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +90-216-2300672">
+                <div class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +90-216-2300672
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="tel: +90-5528892939">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +90-5528892939
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: info@kentforumfuarcilik.com">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  info@kentforumfuarcilik.com
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-col-lg-6">
+      <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-2">PARTNER IN DENMARK</div>
+      <div class="text-body-2 text-md-body-0 text-lg-subtitle-1 text--regular text--uppercase mb-5 mb-md-10">DANISH EXPORT ASSOCIATION</div>
+      <div class="contacts-personal">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-17.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Mr. Martin Winkel Lilleøre</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +45-60208557">
+                <div class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +45-60208557
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: maw@danishexport.dk">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  maw@danishexport.dk
+                </div>
+              </a>
+              <a class="text-small-1 text-md-body-1 text--underline w-max" href="">Join the pavillion of Denmark</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-2">PARTNER IN CHINA</div>
+  <div class="text-body-2 text-md-body-0 text-lg-subtitle-1 text--regular text--uppercase mb-5 mb-md-10">CHINA AQUATIC PRODUCTS PROCESSING AND MARKETING ALLIANCE (CAPPMA)</div>
+
+  <div class="contacts-personal">
+    <div class="grid grid-spacing-4 grid-spacing-md-8">
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-0.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Ms. Han Xiang</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: 86-10-51298074-8071">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  86-10-51298074-8071
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: 13691269267@163.com">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  13691269267@163.com
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-0.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Ms. Wang Hong</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: 86-10-51298074-8016">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  86-10-51298074-8016
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: wanghong@bjyqc.com">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  wanghong@bjyqc.com
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-2">PARTNER IN CHINA</div>
+  <div class="text-body-2 text-md-body-0 text-lg-subtitle-1 text--regular text--uppercase mb-5 mb-md-10">CHINA AQUATIC PRODUCTS PROCESSING AND MARKETING ALLIANCE (CAPPMA)</div>
+
+  <div class="contacts-personal">
+    <div class="grid grid-spacing-4 grid-spacing-md-8">
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-0.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Ms. Lina</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <div class="flex flex-align-center link-hover w-max">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#chat" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  15801561353
+                </div>
+              </div>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: heling615@126.com">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  heling615@126.com
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-alt text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-5 mb-md-8">EXPO SOLUTIONS GROUP — <span class="text--regular font-alt">OPERATOR OF RUSSIAN NATIONAL STAND AT WORLD BIGGEST INDUSTRY EXHIBITIONS</span></div>
+
+  <div class="flex flex-wrap flex-align-center gap-6 mb-5 mb-md-10">
+    <div class="card radius-6 py-5 px-4 px-md-8 w-md-auto w-100">
+      <div class="text-body-0 text-md-subtitle-1 text--bold mb-2">Seafood Expo Global</div>
+      <div class="text-body-1 mb-2">Barcelona, Spain</div>
+      <div class="text-body-1">26-28 April 2022</div>
+    </div>
+    <div class="card radius-6 py-5 px-4 px-md-8 w-md-auto w-100">
+      <div class="text-body-0 text-md-subtitle-1 text--bold mb-2">China Fisheries & Seafood Expo</div>
+      <div class="text-body-1 mb-2">Qingdao, China</div>
+      <div class="text-body-1">26-28 October 2022</div>
+    </div>
+  </div>
+
+  <div class="contacts-card card flex-align-center flex-row gap-5 gap-md-10 radius-6 p-5 p-md-8">
+    <img class="contacts-card__img" src="img/esg.png" alt="">
+    <div class="card-content">
+      <div class="font-alt text-body-0 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-5">Expo Solutions Group — <span class="text--regular font-alt">we represent the russian fish industry at international exhibitions</span></div>
+      <div class="flex flex-wrap flex-align-center gap-4 gap-lg-8">
+        <a class="flex flex-align-center link-hover" href="mailto: INFO@RUSFISHEXPO.COM">
+          <div class="contacts-card__icon flex flex-align-center flex-justify-center color-white radius-2 mr-2">
+            <svg class="icon text-h6 text-md-h3">
+              <use xlink:href="img/icons.svg#world-fill" />
+            </svg>
+          </div>
+          <div class="text-body-1 text--underline">www.rusfishexpo.com</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

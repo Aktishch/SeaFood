@@ -263,7 +263,33 @@
       }
     })
   </script>
-
+  
+  <% var water = [
+    {
+      icon: 'square',
+      title: 'VENUE',
+      subtitle: '26 000 м<sup>2</sup>',
+      text: 'of exhibition space'
+    },
+    {
+      icon: 'world',
+      title: 'PARTICIPANTS',
+      subtitle: '12 469',
+      text: 'specialists from 70 countries <br class="d-none d-md-block"> of the worldand 82 regions <br class="d-none d-md-block"> of Russia'
+    },
+    {
+      icon: 'case',
+      title: 'EXHIBITORS',
+      subtitle: '400',
+      text: 'companies from 34 regions of Russiaand 14 countries'
+    },
+    {
+      icon: 'conference',
+      title: 'PROGRAM',
+      subtitle: '35',
+      text: 'events with 139 speakers'
+    },
+  ] %>
   <section class="water-block relative color-white">
     <div class="bg-block d-none d-md-block">
       <div class="pic pic--rect-y h-100">
@@ -274,58 +300,20 @@
       <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-4">The leading industry events in Russia</div>
       <div class="text-body-2 text-md-body-1 text--bold text--center text--uppercase mb-5 mb-md-10">MEETINGS. CONTRACTS. BUSINESS.</div>
       <div class="grid grid-spacing-6">
-        <div class="grid-col-md-6 grid-col-lg-3">
-          <div class="water-block__item flex flex-column radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-8">
-            <svg class="water-block__icon icon mr-5 mr-md-0">
-              <use xlink:href="img/icons.svg#square" />
-            </svg>
-            <div class="water-block__content">
-              <div class="text-body-2 text-md-body-1 text--uppercase text--bold mb-2 mb-lg-6">VENUE</div>
-              <div class="water-block__text color-light-blue text--bold mb-3">26 000 м<sup>2</sup></div>
-              <div class="water-block__info text-body-2 text-md-body-1">of exhibition space</div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-col-md-6 grid-col-lg-3">
-          <div class="water-block__item flex flex-column radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-8">
-            <svg class="water-block__icon icon mr-5 mr-md-0">
-              <use xlink:href="img/icons.svg#world" />
-            </svg>
-            <div class="water-block__content">
-              <div class="text-body-2 text-md-body-1 text--uppercase text--bold mb-2 mb-lg-6">PARTICIPANTS</div>
-              <div class="water-block__text color-light-blue text--bold mb-3">12 469</div>
-              <div class="water-block__info text-body-2 text-md-body-1">
-                specialists from 70 countries <br class="d-none d-md-block">
-                of the worldand 82 regions <br class="d-none d-md-block">
-                of Russia
+        <% for (var i = 0; i < water.length; i++) { %>
+          <div class="grid-col-md-6 grid-col-lg-3">
+            <div class="water-block__item flex flex-column radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-8">
+              <svg class="water-block__icon icon mr-5 mr-md-0">
+                <use xlink:href="img/icons.svg#<%= water[i].icon %>" />
+              </svg>
+              <div class="water-block__content">
+                <div class="text-body-2 text-md-body-1 text--uppercase text--bold mb-2 mb-lg-6"><%= water[i].title %></div>
+                <div class="water-block__text color-light-blue text--bold mb-3"><%= water[i].subtitle %></div>
+                <div class="water-block__info text-body-2 text-md-body-1"><%= water[i].text %></div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="grid-col-md-6 grid-col-lg-3">
-          <div class="water-block__item flex flex-column radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-8">
-            <svg class="water-block__icon icon mr-5 mr-md-0">
-              <use xlink:href="img/icons.svg#case" />
-            </svg>
-            <div class="water-block__content">
-              <div class="text-body-2 text-md-body-1 text--uppercase text--bold mb-2 mb-lg-6">EXHIBITORS</div>
-              <div class="water-block__text color-light-blue text--bold mb-3">400</div>
-              <div class="water-block__info text-body-2 text-md-body-1">companies from 34 regions of Russiaand 14 countries</div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-col-md-6 grid-col-lg-3">
-          <div class="water-block__item flex flex-column radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-8">
-            <svg class="water-block__icon icon mr-5 mr-md-0">
-              <use xlink:href="img/icons.svg#conference" />
-            </svg>
-            <div class="water-block__content">
-              <div class="text-body-2 text-md-body-1 text--uppercase text--bold mb-2 mb-lg-6">PROGRAM</div>
-              <div class="water-block__text color-light-blue text--bold mb-3">35</div>
-              <div class="water-block__info text-body-2 text-md-body-1">events with 139 speakers</div>
-            </div>
-          </div>
-        </div>
+        <% } %>
       </div>
     </div>
   </section>

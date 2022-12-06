@@ -713,3 +713,41 @@ body {
 		width: 280px;
 	}
 }
+
+.banner-tg {
+	&::before {
+		padding-top: 12%;
+	}
+
+	@media(max-width: $md) {
+		&::before {
+			padding-top: 35%;
+		}
+
+		& .pic__img {
+			object-position: 75%;
+		}
+	}
+}
+
+.download {
+	background: #D85054 linear-gradient(270deg, rgba(0, 166, 255, 0.7) 0%, rgba(0, 166, 255, 0) 60.24%);
+
+	&__icon {
+		font-size: 52px;
+	}
+
+	&__btn {
+		min-width: max-content;
+	}
+
+	@media(max-width: $md) {
+		& {
+			flex-direction: column;
+		}
+
+		&__icon {
+			font-size: 40px;
+		}
+	}
+}

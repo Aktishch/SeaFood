@@ -1,0 +1,25 @@
+<% var data = {
+
+  title: 'Get e-ticket',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="stand bg-l3 shadow radius-6 p-4 mb-5 mb-md-10">
+    <iframe class="w-100 overflow-hidden" frameborder="0" src="https://lk.seafoodexporussia.com/forms/form-en/form?fname=registration_visitor_en&amp;target=form&amp;url=visit" scrolling="auto" style="height: 2200px;"></iframe>
+  </div>
+
+  <a class="banner-tg pic pic--segment radius-4 progress-container duration-3" href="" target="_blank">
+    <div class="progress progress-circle color-light-blue"></div>
+    <img class="pic__img pic__img--rise" src="img/banner-tg.png" alt="">
+  </a>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

@@ -1,0 +1,117 @@
+<% var data = {
+
+  title: 'Exhibitor manual 2022',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">Dear Exhibitors!</div>
+  <div class="text-body-2 text-md-body-1 lh-1-5 fade-80 mb-5 mb-md-10">
+    Here you can find the Exhibitor Manual which contains important information necessary for your exhibition to be successful and efficient.Please note that some order forms must be filled in and returned to the Organizer not later than the date specified therein. For this purpose, please read the Manual’s contents carefully and make the required order on time.
+  </div>
+
+  <%= _.template(require('./html-includes/download.html').default)({text: 'Exhibitor Manual'}) %>
+
+  <div class="flex flex-wrap flex-align-center flex-justify-between gap-5 my-5 my-md-10">
+    <div class="flex flex-column">
+      <div class="text-body-2 text-md-body-1 lh-1-5 fade-80 mb-5 mb-md-10">
+        The Exhibitor Manual deals with technical information of the forthcoming exhibition, <br class="d-none d-lg-block">
+        equipment delivery and handling procedure, rules for tasting products exhibited at <br class="d-none d-lg-block">
+        stands and other useful information which you may need while preparing for the <br class="d-none d-lg-block">
+        exhibition
+      </div>
+      <div class="text-body-2 text-md-body-1 lh-1-5 fade-80 mb-5 mb-md-10">
+        In case you need technical services, please fill the form for ordering equipment and <br class="d-none d-lg-block">
+        services. You may get the forms from your sales or technical manager.
+      </div>
+      <div class="text-body-2 text-md-body-1 text--demibold lh-1-5 fade-80">
+        Some order forms must be filled in and returned to the Organizer on a mandatory <br class="d-none d-lg-block">
+        basis not later than the date specified therein.
+      </div>
+    </div>
+    <div class="exhibitor-img pic pic--rect-x radius-6 progress-container w-100">
+      <div class="progress progress-circle color-light-blue"></div>
+      <img class="pic__img" src="img/exhibitor.png" alt="">
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">CONTACTS</div>
+
+    <% var personal = [
+      {
+        img: '8',
+        email: 'a.moroz@rusfishexpo.com',
+        name: 'Alexey Moroz',
+        work: 'Head of technical department'
+      },
+      {
+        img: '9',
+        email: 'k.aleksandrov@rusfishexpo.com',
+        name: 'Maria Ovchinnikova',
+        work: 'Technical manager'
+      }
+    ] %>
+    
+    <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+    <div class="grid grid-spacing-md-7 mb-5 mb-md-10">
+      <div class="grid-col-lg-6">
+        <div class="text-body-2 text-md-body-1 text--bold text--uppercase lh-1-5 mb-5 mb-md-10">
+          DELIVERY OF GOODS, ITS TERMS AND COSTS PLEASE <br class="d-none d-md-block">
+          COSULT OUR LOGISTICS PARTNER TLK “RAIL SERVICE” LLC
+        </div>
+        <div class="card flex-wrap flex-align-center flex-row radius-4 gap-5 gap-md-10 p-5 p-md-10">
+          <div class="exhibitor-service pic pic--square progress-container w-100">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img pic__sd" src="img/exhibitor-service-1.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-3">TLK “Rail Service” LLC</div>
+            <div class="text-body-1 text-md-subtitle-2 text--regular mb-1">
+              Mobile: <a class="link-hover w-max" href="tel: +7(914)792-58-92">+7(914)792-58-92</a>
+            </div>
+            <div class="text-body-1 text-md-subtitle-2 text--regular mb-3">
+              Primorskyi krai, Vladivostok
+            </div>
+            <a class="text-body-1 text-md-subtitle-2 text--regular mb-1 link-hover w-max" href="mailto: Oper1@tlkrs.ru">Oper1@tlkrs.ru</a>
+            <a class="text-body-1 text-md-subtitle-2 text--regular link-hover w-max" href="www.tlkrs.ru" target="_blank">www.tlkrs.ru</a>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-lg-6">
+        <div class="text-body-2 text-md-body-1 text--bold text--uppercase lh-1-5 mb-5 mb-md-10">
+          FOR LOADING AND UPLOADING GOODS WITHIN THE TERRITORY <br class="d-none d-md-block">
+          OF EXPOFORUM EC PLEASE APPLY TO
+        </div>
+        <div class="card flex-wrap flex-align-center flex-row radius-4 gap-5 gap-md-10 p-5 p-md-10">
+          <div class="exhibitor-service pic pic--square progress-container w-100">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img pic__sd" src="img/exhibitor-service-2.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-3">
+              PAN-BALTservice <br class="d-none d-md-block">Lana Grishina
+            </div>
+            <div class="text-body-1 text-md-subtitle-2 text--regular mb-1">
+              Tel: <a class="link-hover w-max" href="tel: +7(812)322-60-34">+7(812)322-60-34</a>
+            </div>
+            <a class="text-body-1 text-md-subtitle-2 text--regular mb-3 link-hover w-max" href="mailto: lana@pan-baltservice.ru">lana@pan-baltservice.ru</a>
+            <a class="text-body-1 text-md-subtitle-2 text--regular link-hover w-max" href="www.pan-baltservice.ru" target="_blank">www.pan-baltservice.ru</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-body-2 text-md-body-1 text--uppercase mb-5 mb-md-10">LEARN MORE ABOUT OTHER METHODS OF MAKING THE EXHIBITION MORE EFFICIENT IN ADVERTISING MANUAL</div>
+
+    <%= _.template(require('./html-includes/download.html').default)({text: 'Catalogue of advertising opportunities'}) %>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

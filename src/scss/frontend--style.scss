@@ -761,3 +761,25 @@ body {
 		transform: rotate(90deg);
 	}
 }
+
+.exhibitor {
+	&-img {
+		max-width: 510px;
+	}
+
+	&-service {
+		max-width: 150px;
+	}
+
+	@media(max-width: $lg) {
+		&-img {
+			max-width: 100%;
+		}
+	}
+
+	@media(max-width: $md) {
+		&-service {
+			max-width: 100px;
+		}
+	}
+}

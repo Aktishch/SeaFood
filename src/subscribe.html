@@ -1,0 +1,28 @@
+<% var data = {
+
+  title: 'Subscribe to the newsletter',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="info-block flex flex-align-center gap-4 gap-md-8">
+    <div class="info-block__img flex flex-align-center flex-justify-center bg-l3 radius-6 shadow">
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#mailbox" />
+      </svg>
+    </div>
+    <div class="text-body-0 text-md-subtitle-1 text--bold text--uppercase lh-1-5">
+      SUBSCRIBE FOR OUR NEWSLETTER TO BE INFORMED ABOUT ALL IMPORTANT NEWS <br class="d-none d-lg-block">
+      OF RUSSIA’S BIGGEST FISHERY EVENT!
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

@@ -922,3 +922,21 @@ body {
 		}
 	}
 }
+
+.info {
+	&-block {
+		&__img {
+			min-width: 124px;
+			width    : 124px;
+			height   : 124px;
+			font-size: 86px;
+		}
+	}
+
+	@media(max-width: $md) {
+		&-block {
+			flex-direction: column;
+			text-align    : center;
+		}
+	}
+}

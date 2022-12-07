@@ -891,3 +891,34 @@ body {
 		}
 	}
 }
+
+.error-block {
+	margin-bottom: -30px;
+
+	&__text {
+		font-size              : 250px;
+		background             : linear-gradient(180deg, #044393 0%, rgba(4, 67, 147, 0) 100%), #20162C;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip        : text;
+		text-fill-color        : transparent;
+	}
+
+	&__img {
+		max-width: 200px;
+	}
+
+	@media(max-width: $md) {
+		& {
+			margin-bottom: 0;
+		}
+
+		&__text {
+			font-size: 140px;
+		}
+
+		&__img {
+			max-width: 110px;
+		}
+	}
+}

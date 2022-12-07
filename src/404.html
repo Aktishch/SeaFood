@@ -1,0 +1,22 @@
+<% var data = {
+
+  title: '404'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="flex flex-column flex-align-center flex-justify-center pb-10">
+    <div class="error-block flex flex-align-center flex-justify-center">
+      <span class="error-block__text font-alt text--bold">4</span>
+      <img class="error-block__img w-100" src="img/404.png" alt="">
+      <span class="error-block__text font-alt text--bold">4</span>
+    </div>
+    <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase">Ooops, page not found</div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

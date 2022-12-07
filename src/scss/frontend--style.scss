@@ -669,6 +669,10 @@ body {
 	&-personal {
 		margin-bottom: 60px;
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		&__pic {
 			min-width: 130px;
 			width    : 130px;
@@ -749,5 +753,11 @@ body {
 		&__icon {
 			font-size: 40px;
 		}
+	}
+}
+
+.accordion {
+	&.toggle-active &__arrow {
+		transform: rotate(90deg);
 	}
 }

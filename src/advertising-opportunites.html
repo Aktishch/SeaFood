@@ -44,4 +44,119 @@
 
 </section>
 
+  <% var water = [
+    {
+      icon: 'users',
+      title: 'more visitors to <br class="d-none d-md-block"> your stand',
+      subtitle: 'Attract'
+    },
+    {
+      icon: 'chart-bar',
+      title: 'the reach of your <br class="d-none d-md-block"> target audience',
+      subtitle: 'Scale UP'
+    },
+    {
+      icon: 'chart-dots',
+      title: 'the brand awareness',
+      subtitle: 'Increase'
+    },
+    {
+      icon: 'chart-donut',
+      title: 'from your competitors',
+      subtitle: 'Stand out'
+    },
+  ] %>
+  <section class="water-block relative color-white">
+    <div class="bg-block d-none d-md-block">
+      <div class="pic pic--rect-y h-100">
+        <img class="pic__img" src="img/water.png" alt="">
+      </div>
+    </div>
+    <div class="relative">
+      <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-5 mb-md-10">Advertising at Seafood Expo Russia you can:</div>
+      <div class="grid grid-spacing-6">
+        <% for (var i = 0; i < water.length; i++) { %>
+          <div class="grid-col-md-6 grid-col-lg-3">
+            <div class="water-block__item flex flex-column radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-8">
+              <svg class="water-block__icon icon mr-5 mr-md-0">
+                <use xlink:href="img/icons.svg#<%= water[i].icon %>" />
+              </svg>
+              <div class="water-block__content">
+                <div class="text-subtitle-1 text-lg-h2 text--uppercase color-light-blue text--bold mb-0 mb-md-2"><%= water[i].subtitle %></div>
+                <div class="text-body-2 text-md-body-1 text--uppercase text--demibold lh-1-5"><%= water[i].title %></div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-block">
+    <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-5 mb-md-8">
+      LET PEOPLE KNOW YOU WILL PARTICIPATE <br class="d-none d-md-block">IN GLOBAL FISHERY FORUM & SEAFOOD EXPO RUSSIA 2022
+    </div>
+    <div class="text-body-2 text-md-body-1 text--center text--uppercase text--bold mb-5 mb-md-10">USE OUR FREE ADVERTISING OPPORTUNITIES TO ATTRACT MORE VISITORS ON YOUR STAND:</div>
+
+    <% var accordion = [
+      {
+        title: 'Your news at the exhibition website'
+      },
+      {
+        title: 'Exhibition banners for the website and e-mail'
+      },
+      {
+        title: 'Exhibition logo'
+      },
+      {
+        title: 'Invitation template'
+      },
+      {
+        title: 'Templates for social networks'
+      }
+    ] %>
+    <div class="flex flex-column gap-4 mb-5 mb-md-10">
+      <% for (var i = 0; i < accordion.length; i++) { %>
+        <div class="accordion card radius-4 waved" data-toggle-cover>
+          <div class="flex flex-align-center flex-justify-between cursor gap-2 py-6 px-5" data-toggle-link>
+            <div class="flex flex-align-center">
+              <svg class="icon text-subtitle-2 color-primary mr-2 mr-md-4">
+                <use xlink:href="img/icons.svg#i" />
+              </svg>
+              <div class="text-body-1 text-md-subtitle-1 text--bold"><%= accordion[i].title %></div>
+            </div>
+            <svg class="accordion__arrow icon text-small-1 text-md-body-1 color-text duration-3">
+              <use xlink:href="img/icons.svg#to-right" />
+            </svg>
+          </div>
+          <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
+            <div class="text-body-2 text-md-body-1 fade-70 border-top lh-1-5 py-5 px-5 px-md-10">
+              Tell us about your company’s news, products and services you will show at the exhibition and we will publish them on exhibition website and social networks. You may send the text to
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">CONTACTS</div>
+
+    <% var personal = [
+      {
+        img: '8',
+        email: 'a.moroz@rusfishexpo.com',
+        name: 'Alexey Moroz',
+        work: 'Head of technical department'
+      },
+      {
+        img: '9',
+        email: 'k.aleksandrov@rusfishexpo.com',
+        name: 'Maria Ovchinnikova',
+        work: 'Technical manager'
+      }
+    ] %>
+    
+    <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+  
+  </section>
+
 <%= _.template(require('./html-includes/footer.html').default)({data}) %>

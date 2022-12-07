@@ -1,0 +1,52 @@
+<% var data = {
+
+  title: 'Visiting rules',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="bg-l3 radius-4 shadow p-5 p-md-10">
+    <div class="flex flex-align-center mb-5">
+      <svg class="icon text-h4 text-md-h1 color-blue mr-4">
+        <use xlink:href="img/icons.svg#doc" />
+      </svg>
+      <div class="font-alt text-h6 text-md-h4 text-lg-h2 text--bold">Rules of visiting</div>
+    </div>
+    <ul>
+      <li class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+        <b>1.</b> Exhibition and Forum are business events – no persons under 18 years are allowed to attend the event. The event is intended for professional visitors only. A professional visitor shall be considered to be any business owner, individual entrepreneur, officer, manager, administrator, specialist, other representative of foreign and national core companies and enterprises, public authorities, associations and alliances visiting the Exhibition in order to achieve business and professional goals. To confirm the professional status of a visitor the Organizer of the Exhibition may request him/her to produce a confirmation document: business card, powerof attorney, official letter of the organization represented, certificate of employment or any other document proving the professional status of the visitor.
+      </li>
+      <li class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+        <b>2.</b> Access to the exhibition is granted based on a badge. Such badge is valid for the entire duration of the exhibition. To visit the event and get the badge 
+        a visitor must complete registration questionnaire in online or printed format. In case the information provided in the form is incorrect or inconsistent the 
+        Organizer reserves the right to deny visiting the event.
+      </li>
+      <li class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+        <b>3.</b> Any transfer or sale of visitors’ badges to third parties shall be prohibited. The Organizer of the may check whether the name and surname appearing 
+        on the badge correspond to the name and surname of the visitor, for which reason the Organizer may demand that the visitor presents an appropriate 
+        identification document.
+      </li>
+      <li class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+        <b>4.</b> In the exhibition complex territory, visitors are not allowed to distribute any promotion and information products, organize presentations, 
+        demonstrations, agitations and any similar events and actions without written consent of the Organizer.
+      </li>
+      <li class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+        <b>5.</b> It shall be prohibited to appear in the exhibition complex territory in such a condition and to have a look, which do not conform to the business nature 
+        of the Exhibition and generally accepted morals, as well as perform any actions disturbing the public order.
+      </li>
+      <li class="text-body-2 text-md-body-1 lh-1-5">
+        <b>6.</b> In case of the violation of the present Rules, the Organizer may refuse the access to the Exhibition territory to a violator or demand this person to leave 
+        the territory of the event without any refund.
+      </li>
+    </ul>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

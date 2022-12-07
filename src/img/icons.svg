@@ -134,5 +134,9 @@
             <path d="M68.0833 17.9166H17.9167C13.9586 17.9166 10.75 21.1253 10.75 25.0833V60.9166C10.75 64.8747 13.9586 68.0833 17.9167 68.0833H68.0833C72.0414 68.0833 75.25 64.8747 75.25 60.9166V25.0833C75.25 21.1253 72.0414 17.9166 68.0833 17.9166Z" fill="rgba(0, 0, 0, 0)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 			<path d="M10.75 25.0834L43 46.5834L75.25 25.0834" fill="rgba(0, 0, 0, 0)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+		<symbol id="check" width="100%" height="100%" viewBox="0 0 86 86">
+            <path d="M43 75.25C60.8112 75.25 75.25 60.8112 75.25 43C75.25 25.1888 60.8112 10.75 43 10.75C25.1888 10.75 10.75 25.1888 10.75 43C10.75 60.8112 25.1888 75.25 43 75.25Z" stroke="currentColor" stroke-width="5" fill="rgba(0, 0, 0, 0)" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M32.25 43L39.4167 50.1667L53.75 35.8334" fill="rgba(0, 0, 0, 0)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
 	</defs>
 </svg>

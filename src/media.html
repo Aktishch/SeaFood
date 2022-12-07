@@ -1,0 +1,72 @@
+<% var data = {
+
+  title: 'Photo & video',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="media-block flex flex-align-center flex-justify-center relative overflow-hidden radius-6 p-5 mb-5 mb-md-10">
+    <div class="bg-block">
+      <div class="pic pic--rect-x h-100">
+        <img class="pic__img" src="img/media.png" alt="">
+      </div>
+    </div>
+    <div class="media-block__content relative radius-6 w-100">
+      <div class="font-alt text-body-0 text-md-subtitle-1 text--bold text--uppercase text--center">
+        VI GLOBAL FISHERY FORUM & SEAFOOD EXPO RUSSIA 18-20 OCTOBER 2023
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-spacing-7 my-5 my-md-10 py-5 py-md-10">
+    <% for (var i = 0; i < 5; i++) { %>
+      <div class="grid-col-12 grid-col-md-6 grid-col-lg-4">
+        <div class="card radius-6 waved h-100">
+          <div class="pic pic--rect-x progress-container">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/products/product-1.jpg" alt="">
+          </div>
+          <div class="card-content py-6 px-5 px-lg-10">
+            <div class="text-body-1 text-md-subtitle-1 text--bold text--uppercase mb-4 mb-md-6">PHOTO & VIDEO 2022</div>
+            <button class="btn btn--primary btn--link w-max">
+              See more
+              <svg class="card-arrow icon text-subtitle-2 ml-1 ease duration-3">
+                <use xlink:href="img/icons.svg#arrow-move" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-5 mb-md-10">OTHER VIDEO</div>
+
+  <div class="grid grid-spacing-7 mb-5 mb-md-10">
+    <% for (var i = 0; i < 3; i++) { %>
+      <div class="grid-col-md-6 grid-col-lg-4">
+        <a class="pic pic--rect-x radius-6 progress-container waved" href="img/advertising-1.jpg" data-fancybox>
+          <div class="progress progress-circle color-light-blue"></div>
+          <img class="pic__img pic__img--rise" src="img/advertising-1.jpg" alt="">
+          <div class="bg-block flex flex-align-center flex-justify-center">
+            <div class="media-play btn btn--primary btn--white-bg radius-max">
+              <svg class="icon text-h1">
+                <use xlink:href="img/icons.svg#play" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <div class="text-body-0 text-md-subtitle-1 text--bold text--uppercase mt-4">VIDEO TITLE</div>
+      </div>
+    <% } %>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

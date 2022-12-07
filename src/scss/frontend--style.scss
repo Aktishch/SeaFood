@@ -789,3 +789,32 @@ body {
 		max-width: 74px;
 	}
 }
+
+.media {
+	&-block {
+		min-height: 420px;
+		background: radial-gradient(50% 428.83% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) rgba(1, 112, 229, 0.2);
+
+		&__content {
+			max-width      : 660px;
+			background     : radial-gradient(98.48% 326.98% at 0% 3.35%, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 100%);
+			backdrop-filter: blur(10px);
+			padding        : 46px 52px;
+		}
+	}
+
+	&-play {
+		width : 60px;
+		height: 60px;
+	}
+
+	@media(max-width: $md) {
+		&-block {
+			min-height: 300px;
+
+			&__content {
+				padding: 30px 16px;
+			}
+		}
+	}
+}

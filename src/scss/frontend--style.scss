@@ -940,3 +940,34 @@ body {
 		}
 	}
 }
+
+.advantages {
+	&__item {
+		&--1 {
+			background: #0066A2 linear-gradient(137.93deg, rgba(32, 22, 44, 0.6) 0%, rgba(32, 22, 44, 0) 100%);
+		}
+
+		&--2 {
+			background: #20162C linear-gradient(137.93deg, rgba(0, 102, 162, 0.6) 0%, rgba(0, 102, 162, 0) 100%);
+		}
+
+		&--3 {
+			background: #02438F linear-gradient(137.93deg, rgba(32, 22, 44, 0.6) 0%, rgba(32, 22, 44, 0) 100%);
+		}
+
+		&--4 {
+			background: #2BA8C4 linear-gradient(137.93deg, rgba(32, 22, 44, 0.6) 0%, rgba(32, 22, 44, 0) 100%);
+		}
+	}
+
+	&__number {
+		font-size              : 110px;
+		background             : linear-gradient(123.73deg, rgba(255, 255, 255, 0.48) 24.21%, rgba(255, 255, 255, 0.04) 67.44%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip        : text;
+		text-fill-color        : transparent;
+		-webkit-text-stroke    : 1px var(--color-gray);
+		backdrop-filter        : blur(3px);
+	}
+}

@@ -1,0 +1,116 @@
+<% var data = {
+
+  title: 'Photo & video 2022',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block overflow-hidden">
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">OPENING CEREMONY AND OFFICIAL TOUR</div>
+
+  <div class="media-slider slider pb-5 mb-5 pb-md-10 mb-md-10">
+    <div class="media-swiper swiper grid-spacing-6 overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 6; i++) { %>
+          <div class="swiper-slide grid-col-10 grid-col-md-6 grid-col-lg-4 h-auto mt-0">
+            <a class="media-slide pic pic--rect-x radius-6 progress-container waved" href="img/advertising-1.jpg" data-fancybox>
+              <div class="progress progress-circle color-light-blue"></div>
+              <img class="pic__img pic__img--rise" src="img/advertising-1.jpg" alt="">
+            </a>
+          </div>
+        <% } %>
+      </div>
+      <button class="media-slider__btn slider-btn slider-prev btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+        <svg class="icon text-subtitle-2">
+          <use xlink:href="img/icons.svg#to-left" />
+        </svg>
+      </button>
+      <button class="media-slider__btn slider-btn slider-next btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+        <svg class="icon text-subtitle-2">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </button>
+      <div class="media-slider-pagination d-md-none d-flex flex-align-center flex-justify-center mt-5"></div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">PLENARY SESSION</div>
+
+  <div class="media-slider slider pb-5 mb-5 pb-md-10 mb-md-10">
+    <div class="media-swiper swiper grid-spacing-6 overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 6; i++) { %>
+          <div class="swiper-slide grid-col-10 grid-col-md-6 grid-col-lg-4 h-auto mt-0">
+            <a class="media-slide pic pic--rect-x radius-6 progress-container waved" href="img/advertising-1.jpg" data-fancybox>
+              <div class="progress progress-circle color-light-blue"></div>
+              <img class="pic__img pic__img--rise" src="img/advertising-1.jpg" alt="">
+            </a>
+          </div>
+        <% } %>
+      </div>
+      <button class="media-slider__btn slider-btn slider-prev btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+        <svg class="icon text-subtitle-2">
+          <use xlink:href="img/icons.svg#to-left" />
+        </svg>
+      </button>
+      <button class="media-slider__btn slider-btn slider-next btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+        <svg class="icon text-subtitle-2">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </button>
+      <div class="media-slider-pagination d-md-none d-flex flex-align-center flex-justify-center mt-5"></div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">EXHIBTION</div>
+
+  <div class="media-slider slider">
+    <div class="media-swiper swiper grid-spacing-6 overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 6; i++) { %>
+          <div class="swiper-slide grid-col-10 grid-col-md-6 grid-col-lg-4 h-auto mt-0">
+            <a class="media-slide pic pic--rect-x radius-6 progress-container waved" href="img/advertising-1.jpg" data-fancybox>
+              <div class="progress progress-circle color-light-blue"></div>
+              <img class="pic__img pic__img--rise" src="img/advertising-1.jpg" alt="">
+            </a>
+          </div>
+        <% } %>
+      </div>
+      <button class="media-slider__btn slider-btn slider-prev btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+        <svg class="icon text-subtitle-2">
+          <use xlink:href="img/icons.svg#to-left" />
+        </svg>
+      </button>
+      <button class="media-slider__btn slider-btn slider-next btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+        <svg class="icon text-subtitle-2">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </button>
+      <div class="media-slider-pagination d-md-none d-flex flex-align-center flex-justify-center mt-5"></div>
+    </div>
+  </div>
+
+  <script>
+    new Swiper('.media-slider .swiper', {
+      slidesPerView: 'auto',
+      watchSlidesProgress: true,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.media-slider .slider-next',
+        prevEl: '.media-slider .slider-prev'
+      },
+      pagination: {
+        el: '.media-slider .media-slider-pagination',
+        clickable: true
+      }
+    })
+  </script>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

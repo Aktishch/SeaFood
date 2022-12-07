@@ -1,0 +1,193 @@
+<% var data = {
+
+  title: 'Travel & accomodation',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="text-md-body-1 text-body-2 lh-1-5 mb-5 mb-md-8">
+    We are interested in making your stay in Saint Petersburg comfortable and work at the exhibition fruitful and enjoyable.To book comfortable accommodation we recommend using the services of our offitial travel partner company:
+  </div>
+
+  <div class="flex flex-align-center mb-5 mb-md-10">
+    <div class="travel-img pic pic--square progress-container w-100 mr-3 mr-md-5">
+      <div class="progress progress-circle color-light-blue"></div>
+      <img class="pic__img" src="img/travel-img.jpg" alt="">
+    </div>
+    <div class="flex flex-column">
+      <span class="text-body-2 text-md-body-1 mb-2">City-booking and travel centre</span>
+      <a class="text-body-0 text-md-subtitle-1 text--bold text--uppercase color-dark-blue" href="WWW.CBTC.RU">WWW.CBTC.RU</a>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5">The company offers the following services:</div>
+
+  <ul class="flex flex-column gap-4 mb-5 mb-md-10">
+    <li class="flex flex-align-center">
+      <span class="color-primary text--bold mr-2">✓</span>
+      <span class="text-body-2 text-md-body-1">Hotel booking</span>
+    </li>
+    <li class="flex flex-align-center">
+      <span class="color-primary text--bold mr-2">✓</span>
+      <span class="text-body-2 text-md-body-1">Flight and train booking</span>
+    </li>
+    <li class="flex flex-align-center">
+      <span class="color-primary text--bold mr-2">✓</span>
+      <span class="text-body-2 text-md-body-1">Transfer services</span>
+    </li>
+    <li class="flex flex-align-center">
+      <span class="color-primary text--bold mr-2">✓</span>
+      <span class="ttext-body-2 text-md-body-1">Visa support</span>
+    </li>
+  </ul>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">HOTEL BOOKING:</div>
+
+  <div class="contacts-personal">
+    <div class="grid grid-spacing-4 grid-spacing-md-8">
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-13.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Tatiana Solonenko</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (495) 231-33-99">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (495) 231-33-99, ext. 719
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (926) 236-33-65">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (926) 236-33-65
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: solonenko@cbtc.ru">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  solonenko@cbtc.ru
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-14.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Ivan Ivanov</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (495) 231-33-99">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (495) 231-33-99, ext. 232
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (926) 232-52-92">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (926) 232-52-92
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: ivanovia@cbtc.ru">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  ivanovia@cbtc.ru
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">VISA SUPPORT:</div>
+
+  <div class="contacts-personal">
+    <div class="grid grid-spacing-4 grid-spacing-md-8">
+      <div class="grid-col-12 grid-col-lg-6">
+        <div class="contacts-personal__card card flex-align-center flex-row gap-3 gap-md-4 radius-6 waved p-2 p-md-5">
+          <div class="contacts-personal__pic pic pic--square progress-container radius-2">
+            <div class="progress progress-circle color-light-blue"></div>
+            <img class="pic__img" src="img/personal/person-0.png" alt="">
+          </div>
+          <div class="card-content">
+            <div class="text-body-1 text-md-subtitle-2 text--bold mb-2">Nikolai Khomenko</div>
+            <div class="flex flex-column gap-1 gap-md-2">
+              <a class="flex flex-align-center link-hover w-max" href="tel: +7 (495) 231-33-99">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#phone" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  +7 (495) 231-33-99, ext. 501
+                </div>
+              </a>
+              <a class="flex flex-align-center link-hover w-max" href="mailto: khomenkonn@cbtc.ru">
+                <div
+                  class="contacts-personal__icon d-none d-md-flex flex-align-center flex-justify-center color-white radius-1 mr-2">
+                  <svg class="icon text-body-0">
+                    <use xlink:href="img/icons.svg#email" />
+                  </svg>
+                </div>
+                <div class="text-small-1 text-md-body-1">
+                  khomenkonn@cbtc.ru
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

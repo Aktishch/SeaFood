@@ -258,6 +258,73 @@ body {
 	}
 }
 
+.slider {
+	&-swiper {
+
+		&::before,
+		&::after {
+			content       : '';
+			position      : absolute;
+			top           : 0;
+			bottom        : 0;
+			width         : 420px;
+			height        : 100%;
+			z-index       : var(--z-1);
+			pointer-events: none;
+		}
+
+		&::before {
+			left      : -420px;
+			background: linear-gradient(-90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
+		}
+
+		&::after {
+			right     : -420px;
+			background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
+		}
+
+	}
+
+	&-btn {
+		width     : 60px;
+		height    : 60px;
+		box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.16);
+
+		&.slider-prev {
+			left: -30px;
+		}
+
+		&.slider-next {
+			left : auto;
+			right: -30px;
+		}
+	}
+
+	&-pagination {
+		& .swiper-pagination-bullet {
+			width           : 12px;
+			height          : 12px;
+			border-radius   : 50%;
+			background-color: var(--color-primary-40);
+			margin          : 0 10px;
+
+			&.swiper-pagination-bullet-active {
+				background-color: var(--color-primary);
+			}
+		}
+	}
+
+	@media(max-width: $md) {
+		&-swiper {
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
 .started {
 	min-height: 780px;
 
@@ -287,7 +354,7 @@ body {
 }
 
 .forum {
-	&__video {
+	&__block {
 		height: 350px;
 	}
 
@@ -306,7 +373,7 @@ body {
 	}
 
 	@media(max-width: $md) {
-		&__video {
+		&__block {
 			height: 280px;
 		}
 
@@ -317,32 +384,6 @@ body {
 }
 
 .expo {
-	&-swiper {
-
-		&::before,
-		&::after {
-			content       : '';
-			position      : absolute;
-			top           : 0;
-			bottom        : 0;
-			width         : 420px;
-			height        : 100%;
-			z-index       : var(--z-1);
-			pointer-events: none;
-		}
-
-		&::before {
-			left      : -420px;
-			background: linear-gradient(-90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
-		}
-
-		&::after {
-			right     : -420px;
-			background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
-		}
-
-	}
-
 	&-slide {
 		min-height: 300px;
 
@@ -365,34 +406,6 @@ body {
 		}
 	}
 
-	&__btn {
-		width : 60px;
-		height: 60px;
-
-		&.slider-prev {
-			left: -30px;
-		}
-
-		&.slider-next {
-			left : auto;
-			right: -30px;
-		}
-	}
-
-	&-pagination {
-		& .swiper-pagination-bullet {
-			width           : 12px;
-			height          : 12px;
-			border-radius   : 50%;
-			background-color: var(--color-blue-40);
-			margin          : 0 4px;
-
-			&.swiper-pagination-bullet-active {
-				background-color: var(--color-blue);
-			}
-		}
-	}
-
 	@media(hover) {
 		&-slide:hover {
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -400,14 +413,6 @@ body {
 	}
 
 	@media(max-width: $md) {
-		&-swiper {
-
-			&::before,
-			&::after {
-				display: none;
-			}
-		}
-
 		&-slide {
 			min-height: 270px;
 		}
@@ -817,76 +822,12 @@ body {
 		height: 60px;
 	}
 
-	&-slider {
-		&__btn {
-			width : 60px;
-			height: 60px;
-
-			&.slider-prev {
-				left: -30px;
-			}
-
-			&.slider-next {
-				left : auto;
-				right: -30px;
-			}
-		}
-
-		&-pagination {
-			& .swiper-pagination-bullet {
-				width           : 12px;
-				height          : 12px;
-				border-radius   : 50%;
-				background-color: var(--color-blue-40);
-				margin          : 0 4px;
-
-				&.swiper-pagination-bullet-active {
-					background-color: var(--color-blue);
-				}
-			}
-		}
-	}
-
-	&-swiper {
-
-		&::before,
-		&::after {
-			content       : '';
-			position      : absolute;
-			top           : 0;
-			bottom        : 0;
-			width         : 420px;
-			height        : 100%;
-			z-index       : var(--z-1);
-			pointer-events: none;
-		}
-
-		&::before {
-			left      : -420px;
-			background: linear-gradient(-90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
-		}
-
-		&::after {
-			right     : -420px;
-			background: linear-gradient(90deg, rgba(247, 247, 248, 0) 0%, #F7F7F8 100%);
-		}
-
-	}
-
 	@media(max-width: $md) {
 		&-block {
 			min-height: 300px;
 
 			&__content {
 				padding: 30px 16px;
-			}
-		}
-
-		&-swiper {
-
-			&::before,
-			&::after {
-				display: none;
 			}
 		}
 	}
@@ -968,6 +909,20 @@ body {
 		background-clip        : text;
 		text-fill-color        : transparent;
 		-webkit-text-stroke    : 1px var(--color-gray);
+		text-shadow            : 0px 20px 40px rgba(0, 0, 0, 0.05);
 		backdrop-filter        : blur(3px);
+	}
+
+	@media(max-width: $md) {
+		&__border {
+			flex-direction: row;
+			align-items   : center;
+		}
+	}
+}
+
+.reviews {
+	&-slider {
+		margin-top: 100px;
 	}
 }

@@ -138,5 +138,8 @@
             <path d="M43 75.25C60.8112 75.25 75.25 60.8112 75.25 43C75.25 25.1888 60.8112 10.75 43 10.75C25.1888 10.75 10.75 25.1888 10.75 43C10.75 60.8112 25.1888 75.25 43 75.25Z" stroke="currentColor" stroke-width="5" fill="rgba(0, 0, 0, 0)" stroke-linecap="round" stroke-linejoin="round"/>
 			<path d="M32.25 43L39.4167 50.1667L53.75 35.8334" fill="rgba(0, 0, 0, 0)" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+		<symbol id="quote" width="100%" height="100%" viewBox="0 0 24 16">
+            <path d="M23.872 0.983997L18.352 15.096H11.104L18.928 0.983997H23.872ZM12.976 0.983997L7.456 15.096H0.256L8.032 0.983997H12.976Z" fill="currentColor"/>
+        </symbol>
 	</defs>
 </svg>

@@ -59,7 +59,7 @@
       <div class="grid-col-lg-6">
         <div class="grid grid-spacing-4 grid-spacing-md-7">
           <div class="grid-col-12">
-            <div class="forum__video relative radius-6 color-white overflow-hidden h-100">
+            <div class="forum__block relative radius-6 color-white overflow-hidden h-100">
               <div class="bg-block">
                 <div class="pic pic--rect-x h-100">
                   <img class="pic__img" src="img/forum-video.jpg" alt="">
@@ -111,7 +111,7 @@
     <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-4">GLOBAL FISHERY FORUM & SEAFOOD EXPO RUSSIA</div>
     <div class="text-body-2 text-md-body-1 text--bold text--center text--uppercase mb-5 mb-md-10">OCTOBER, 18-20, 2023, SAINT PETERSBURG</div>
     <div class="expo-slider slider">
-      <div class="expo-swiper swiper grid-spacing-6 overflow-visible">
+      <div class="slider-swiper swiper grid-spacing-6 overflow-visible">
         <div class="swiper-wrapper">
           <div class="swiper-slide grid-col-10 grid-col-md-6 grid-col-lg-4 h-auto mt-0">
             <div class="expo-slide expo-slide--blue flex flex-align-center relative radius-6 overflow-hidden h-100 duration-3">
@@ -234,17 +234,17 @@
           </div>
         </div>
       </div>
-      <button class="expo__btn slider-btn slider-prev btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+      <button class="slider-btn slider-prev btn btn--white btn--fill d-none d-md-flex radius-max p-0">
         <svg class="icon text-subtitle-2">
           <use xlink:href="img/icons.svg#to-left" />
         </svg>
       </button>
-      <button class="expo__btn slider-btn slider-next btn btn--white btn--fill d-none d-md-flex radius-max shadow p-0">
+      <button class="slider-btn slider-next btn btn--white btn--fill d-none d-md-flex radius-max p-0">
         <svg class="icon text-subtitle-2">
           <use xlink:href="img/icons.svg#to-right" />
         </svg>
       </button>
-      <div class="expo-pagination d-md-none d-flex flex-align-center flex-justify-center mt-5"></div>
+      <div class="slider-pagination d-md-none d-flex flex-align-center flex-justify-center mt-5"></div>
     </div>
   </section>
 
@@ -258,7 +258,7 @@
         prevEl: '.expo-slider .slider-prev'
       },
       pagination: {
-        el: '.expo-slider .expo-pagination',
+        el: '.expo-slider .slider-pagination',
         clickable: true
       }
     })

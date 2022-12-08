@@ -1,3 +1,5 @@
+import chart from './chart';
+
 const outNum = (elem, time, step) => {
 
 	const items = document.querySelectorAll(`.${elem}`)
@@ -58,6 +60,7 @@ const scrollToPercent = () => {
 
 			outNum('-number-', 2000, 0.2)
 			getProgress('-progress-line-')
+			chart.init()
 
 			document.removeEventListener('scroll', scrollToPercent)
 

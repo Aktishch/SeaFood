@@ -9,11 +9,9 @@ import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
 import mobileMenu from './mobile-menu';
 import scrollHeader from './scroll-header';
-import chart from './chart';
 import outNumber from './out-number';
 import filter from './filter';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
-
 
 import '../scss/index.scss';
 
@@ -40,7 +38,6 @@ function loadHandler() {
 
 	mobileMenu.init()
 	scrollHeader.init()
-	chart.init()
 	outNumber.init()
 	filter.init()
 

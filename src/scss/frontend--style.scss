@@ -779,8 +779,30 @@ body {
 }
 
 .accordion {
+	&__text {
+		&--2 {
+			display: none;
+		}
+	}
+
 	&.toggle-active &__arrow {
-		transform: rotate(90deg);
+		transform: rotate(-90deg);
+	}
+
+	&.toggle-active &__text--1 {
+		display: none;
+	}
+
+	&.toggle-active &__text--2 {
+		display: block;
+	}
+
+	&.toggle-active &__head {
+		order: 2;
+	}
+
+	&.toggle-active &__body {
+		order: 1;
 	}
 }
 
@@ -1115,7 +1137,7 @@ body {
 
 	@media(max-width: $lg) {
 		&__items {
-			background-color     : var(--color-primary);
+			background-color     : var(--color-dark-blue-90);
 			grid-template-columns: 1fr;
 
 			border: {
@@ -1149,6 +1171,25 @@ body {
 .materials {
 	&__btn {
 		width: 240px;
+	}
+
+	&-info {
+		&__item {
+			border-bottom: 1px dashed var(--color-gray);
+		}
+
+		&__shildik {
+			min-width       : 32px;
+			width           : 32px;
+			height          : 32px;
+			background-color: var(--color-dark-blue-10);
+		}
+
+		&__pic {
+			min-width: 54px;
+			width    : 54px;
+			height   : 54px;
+		}
 	}
 
 	@media(max-width: $md) {

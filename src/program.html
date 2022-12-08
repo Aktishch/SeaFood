@@ -1,0 +1,166 @@
+<% var data = {
+
+  title: 'Business program',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="filter mb-5 mb-md-10 pb-5 pb-md-10 -filter-">
+    <div class="filter__items gap-5 gap-lg-0 relative border-bottom pb-7 pt-7 px-4 pb-lg-4 pt-lg-0 px-lg-0">
+      <div class="filter__item filter__item--active flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--1">17 october (Day 0)</div>
+      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--2">18 October (Day 1)</div>
+      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--3">19 october (Day 2)</div>
+      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--4">20 october (Day 3)</div>
+      <span class="filter__line d-none d-lg-block absolute bg-primary radius-2 linear duration-3 -filter-line-"></span>
+    </div>
+    <div class="materials mt-5 mt-md-10 pt-5 pt-md-10">
+      <div class="filter__card filter__card--1 -filter-card-">
+
+        <div class="materials__head flex flex-wrap flex-align-center flex-justify-between gap-4 mb-5 mb-md-10">
+          <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase">18 October (Day 1)</div>
+          <div class="flex flex-align-center flex-justify-center flex-wrap gap-4 gap-lg-8">
+            <button class="materials__btn btn btn--primary btn--fill">Download Program</button>
+            <button class="materials__btn btn btn--primary btn--contur color-text">View Materials</button>
+          </div>
+        </div>
+
+        <div class="materials-info flex flex-column">
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60">9:00 - 10:00</div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold">REGISTRATION OF EVENT PARTICIPANTS</div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">10:00 - 11:30</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60">MAIN ARENA PASSAGE</div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold mb-2">OFFICIAL OPENING CEREMONY AND TOUR OF THE EXPOSITION</div>
+                <div class="text-body-2 text-md-body-1 lh-1-5">
+                  An invitation to take part is extended to event organisers and participants, representatives of Russian ministries and departments, foreign delegations, heads of associations and unions, fishing and fish-processing companies
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">11:30 - 13:00</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60 mb-3 mb-md-5">CONFERENCE HALL Е8-Е12</div>
+                <div class="flex flex-wrap flex-align-center gap-2">
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#star" />
+                    </svg>
+                  </div>
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#headphones" />
+                    </svg>
+                  </div>
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#link" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold mb-2">GLOBAL FISHERY FORUM PLENARY SESSION ‘SMART FISHING: RESEARCH, CATCHING, PROCESSING’</div>
+                <div class="accordion flex flex-column mb-6" data-toggle-cover>
+                  <div class="accordion__head flex flex-align-center color-primary text-body-1 text--bold" data-toggle-link>
+                    <span class="accordion__text accordion__text--1">Legend and discussion topics</span>
+                    <span class="accordion__text accordion__text--2">Hide</span>
+                    <svg class="accordion__arrow text-body-2 icon duration-3 ml-2">
+                      <use xlink:href="img/icons.svg#to-right" />
+                    </svg>
+                  </div>
+                  <div class="accordion__body" data-toggle-content data-toggle-height="true" data-toggle-static="true">
+                    <div class="text-body-2 text-md-body-1 lh-1-5">
+                      An invitation to take part is extended to event organisers and participants, representatives of Russian ministries and departments, foreign delegations, heads of associations and unions, fishing and fish-processing companies
+                    </div>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold mb-4">SPEAKERS:</div>
+                <div class="mb-6">
+                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                    <% for (var i = 0; i < 9; i++) { %>
+                      <div class="grid-col-6">
+                        <div class="flex flex-align-center">
+                          <div class="materials-info__pic pic pic--square radius-max mr-3">
+                            <img class="pic__img" src="img/personal/person-11.png" alt="">
+                          </div>
+                          <div class="flex flex-column">
+                            <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
+                            <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                          </div>
+                        </div>
+                      </div>
+                    <% } %>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold mb-4">MODERATOR:</div>
+                <div class="mb-6">
+                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                    <div class="grid-col-6">
+                      <div class="flex flex-align-center">
+                        <div class="materials-info__pic pic pic--square radius-max mr-3">
+                          <img class="pic__img" src="img/personal/person-11.png" alt="">
+                        </div>
+                        <div class="flex flex-column">
+                          <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
+                          <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+      <div class="filter__card filter__card--2 d-none -filter-card-">
+        fdfsdfsdfsdfsdfds
+      </div>
+      <div class="filter__card filter__card--3 d-none -filter-card-">
+        fdfsdfsdfsdfsdfds
+      </div>
+      <div class="filter__card filter__card--4 d-none -filter-card-">
+        fdfsdfsdfsdfsdfds
+      </div>
+    </div>
+  </div>
+  
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">CONTACTS</div>
+
+  <% var personal = [
+    {
+      img: '10',
+      email: 'e.gritsenko@rusfishexpo.com',
+      name: 'Ekaterina Gritsenko',
+      work: 'Business Program Director'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

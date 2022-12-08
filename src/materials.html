@@ -11,7 +11,7 @@
 
 <section class="page-block">
 
-  <div class="filter -filter-">
+  <div class="filter mb-5 mb-md-10 pb-5 pb-md-10 -filter-">
     <div class="filter__items gap-5 gap-lg-0 relative border-bottom pb-7 pt-7 px-4 pb-lg-4 pt-lg-0 px-lg-0">
       <div class="filter__item filter__item--active flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--1">18 october (Day 1)</div>
       <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--2">19 October (Day 2)</div>
@@ -20,6 +20,7 @@
     </div>
     <div class="materials mt-5 mt-md-10 pt-5 pt-md-10">
       <div class="filter__card filter__card--1 -filter-card-">
+        
         <div class="materials__head flex flex-wrap flex-align-center flex-justify-between gap-4 mb-5 mb-md-10">
           <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase">18 October (Day 1)</div>
           <button class="materials__btn btn btn--primary btn--fill">Download Program</button>
@@ -36,7 +37,7 @@
             title: 'Global Fishery Forum Roundtable ‘An Alternative and/or an Opportunity’'
           }
         ] %>
-        <div class="flex flex-column gap-4 mb-5 mb-md-10 pb-5 pb-md-10">
+        <div class="flex flex-column gap-4">
           <% for (var i = 0; i < accordion.length; i++) { %>
             <div class="accordion card radius-4 waved" data-toggle-cover>
               <div class="flex flex-align-center flex-justify-between cursor gap-2 py-6 px-5" data-toggle-link>
@@ -65,20 +66,6 @@
             </div>
           <% } %>
         </div>
-
-        <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">CONTACTS</div>
-
-        <% var personal = [
-          {
-            img: '10',
-            email: 'e.gritsenko@rusfishexpo.com',
-            name: 'Ekaterina Gritsenko',
-            work: 'Business Program Director'
-          }
-        ] %>
-      
-        <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
-
       </div>
       <div class="filter__card filter__card--2 d-none -filter-card-">
         fdfsdfsdfsdfsdfds
@@ -88,6 +75,19 @@
       </div>
     </div>
   </div>
+  
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">CONTACTS</div>
+
+  <% var personal = [
+    {
+      img: '10',
+      email: 'e.gritsenko@rusfishexpo.com',
+      name: 'Ekaterina Gritsenko',
+      work: 'Business Program Director'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
 
 </section>
 

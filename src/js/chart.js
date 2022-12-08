@@ -33,7 +33,7 @@ const init = () => {
                             weight: 700,
                             lineHeight: 1.6
                         },
-                        formatter: function(value, chartContext) {
+                        formatter: function (value, chartContext) {
                             return value + '%';
                         }
                     }
@@ -69,7 +69,7 @@ const init = () => {
                             weight: 700,
                             lineHeight: 1.6
                         },
-                        formatter: function(value, chartContext) {
+                        formatter: function (value, chartContext) {
                             return value + '%';
                         }
                     }

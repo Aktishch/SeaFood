@@ -1,0 +1,94 @@
+<% var data = {
+
+  title: 'Business program materials2022',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="filter -filter-">
+    <div class="filter__items gap-5 gap-lg-0 relative border-bottom pb-7 pt-7 px-4 pb-lg-4 pt-lg-0 px-lg-0">
+      <div class="filter__item filter__item--active flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--1">18 october (Day 1)</div>
+      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--2">19 October (Day 2)</div>
+      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor -filter-item-" data-filter="filter__card--3">20 october (Day 3)</div>
+      <span class="filter__line d-none d-lg-block absolute bg-primary radius-2 linear duration-3 -filter-line-"></span>
+    </div>
+    <div class="materials mt-5 mt-md-10 pt-5 pt-md-10">
+      <div class="filter__card filter__card--1 -filter-card-">
+        <div class="materials__head flex flex-wrap flex-align-center flex-justify-between gap-4 mb-5 mb-md-10">
+          <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase">18 October (Day 1)</div>
+          <button class="materials__btn btn btn--primary btn--fill">Download Program</button>
+        </div>
+
+        <% var accordion = [
+          {
+            title: 'Global Fishery Forum Plenary Session ‘Smart Fishing: Research, Catching, Processing’'
+          },
+          {
+            title: 'Global Fishery Forum Roundtable ‘Smart Logistics’'
+          },
+          {
+            title: 'Global Fishery Forum Roundtable ‘An Alternative and/or an Opportunity’'
+          }
+        ] %>
+        <div class="flex flex-column gap-4 mb-5 mb-md-10 pb-5 pb-md-10">
+          <% for (var i = 0; i < accordion.length; i++) { %>
+            <div class="accordion card radius-4 waved" data-toggle-cover>
+              <div class="flex flex-align-center flex-justify-between cursor gap-2 py-6 px-5" data-toggle-link>
+                <div class="flex flex-align-center">
+                  <svg class="icon d-none d-md-block text-subtitle-2 color-primary mr-2 mr-md-4">
+                    <use xlink:href="img/icons.svg#i" />
+                  </svg>
+                  <div class="text-body-2 text-md-subtitle-1 text--bold"><%= accordion[i].title %></div>
+                </div>
+                <svg class="accordion__arrow icon text-small-1 text-md-body-1 color-text duration-3">
+                  <use xlink:href="img/icons.svg#to-right" />
+                </svg>
+              </div>
+              <div data-toggle-content data-toggle-height="true" data-toggle-static="true">
+                <div class="flex flex-column gap-5 border-top py-5 px-5 px-md-10">
+                  <div class="materials__item flex flex-align-center gap-2 gap-md-4">
+                    <div class="flex flex-align-center flex-justify-center text-small-1 text--bold text--uppercase text--center color-text bg-light-blue radius-1 py-1 px-2">RUS</div>
+                    <div class="text-body-2 text-md-body-1 lh-1-5">Oleg Kobiakov. Presentation of FAO State of World Fisheries and Aquaculture 2022 Performance Indicators</div>
+                  </div>
+                  <div class="materials__item flex flex-align-center gap-2 gap-md-4">
+                    <div class="flex flex-align-center flex-justify-center text-small-1 text--bold text--uppercase text--center color-white bg-blue radius-1 py-1 px-2">ENG</div>
+                    <div class="text-body-2 text-md-body-1 lh-1-5">Fan Xubing. Global Seafood Consumption Trends Since the End of the COVID-19 Pandemic</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+
+        <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">CONTACTS</div>
+
+        <% var personal = [
+          {
+            img: '10',
+            email: 'e.gritsenko@rusfishexpo.com',
+            name: 'Ekaterina Gritsenko',
+            work: 'Business Program Director'
+          }
+        ] %>
+      
+        <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+      </div>
+      <div class="filter__card filter__card--2 d-none -filter-card-">
+        fdfsdfsdfsdfsdfds
+      </div>
+      <div class="filter__card filter__card--3 d-none -filter-card-">
+        fdfsdfsdfsdfsdfds
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

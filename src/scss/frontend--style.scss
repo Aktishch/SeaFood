@@ -1086,3 +1086,80 @@ body {
 		}
 	}
 }
+
+.filter {
+	&__items {
+		display              : grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	&__item {
+		&--active {
+			font-weight: bold;
+			opacity    : 1;
+			color      : var(--color-primary);
+		}
+	}
+
+	&__card {
+		&--active {
+			animation: 0.5s cardUp ease 1 both;
+		}
+	}
+
+	&__line {
+		left  : 0;
+		bottom: 0;
+		height: 3px;
+	}
+
+	@media(max-width: $lg) {
+		&__items {
+			background-color     : var(--color-primary);
+			grid-template-columns: 1fr;
+
+			border: {
+				bottom: none;
+				radius: 16px;
+			}
+		}
+
+		&__item {
+			color: var(--color-white);
+
+			&--active {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@keyframes cardUp {
+	0% {
+		opacity  : 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity  : 1;
+		transform: translateY(0);
+	}
+}
+
+.materials {
+	&__btn {
+		width: 240px;
+	}
+
+	@media(max-width: $md) {
+		&__head {
+			flex-direction : column;
+			justify-content: center;
+		}
+
+		&__item {
+			flex-direction: column;
+			align-items   : flex-start;
+		}
+	}
+}

@@ -11,6 +11,7 @@ import mobileMenu from './mobile-menu';
 import scrollHeader from './scroll-header';
 import chart from './chart';
 import outNumber from './out-number';
+import filter from './filter';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 
@@ -41,5 +42,6 @@ function loadHandler() {
 	scrollHeader.init()
 	chart.init()
 	outNumber.init()
+	filter.init()
 
 }

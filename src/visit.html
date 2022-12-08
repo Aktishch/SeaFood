@@ -1,0 +1,251 @@
+<% var data = {
+
+  title: 'Why exhibit?',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block overflow-hidden">
+
+  <div class="forum pb-md-10 mb-5 mb-md-10">
+    <div class="grid grid-spacing-4 grid-spacing-md-7">
+      <div class="grid-col-lg-6">
+        <div class="bg-l3 shadow relative radius-6 overflow-hidden h-100 p-5 p-md-10">
+          <div class="bg-block d-none d-lg-block">
+            <div class="pic pic--rect-y h-100">
+              <img class="pic__img" src="img/build-black.png" alt="">
+            </div>
+          </div>
+          <div class="relative">
+            <div class="font-alt text-subtitle-2 text-md-h2 text--bold text--uppercase lh-1-5 mb-5 mb-md-8">
+              Dear Exhibitors!
+            </div>
+            <div class="text-body-2 text-md-body-1 lh-1-5 mb-5 mb-md-10">
+              SEAFOOD EXPO RUSSIA is the perfect platform to promote new products, equipment and services in Russia. The event connects thousands of businesses from around the world with Russia's industry buyers. Among participants are fishing companies, fish farms, fish processing companies, shipowners, cargo shipping enterprises, package equipment producers traders & retail representatives from Russia’s leading supermarket chains, wholesalers, HoReCa sector members.
+            </div>
+            <div class="forum__btns flex flex-wrap flex-align-center gap-5">
+              <button class="forum__btn btn btn--primary btn--fill">Get a ticket</button>
+              <button class="forum__btn btn btn--primary btn--contur">Photo & Video</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-lg-6">
+        <div class="grid grid-spacing-4 grid-spacing-md-7">
+          <div class="grid-col-12">
+            <div class="forum__block relative radius-6 color-white overflow-hidden h-100">
+              <div class="bg-block">
+                <div class="pic pic--rect-x h-100">
+                  <img class="pic__img" src="img/forum-1.png" alt="">
+                </div>
+              </div>
+              <div class="relative flex flex-column flex-grow text-body-1 color-text text-md-subtitle-2 text--bold lh-1-5 h-100 py-5 px-6 py-md-10">
+                2 PAVILIONS AND 26 000 M2 <br>
+                OF EXHIBITION SPACE
+              </div>
+            </div>
+          </div>
+          <div class="grid-col-md-6">
+            <div class="forum__item relative radius-6 bg-blue overflow-hidden h-100">
+              <div class="bg-block">
+                <div class="pic pic--rect-y progress-container h-100">
+                  <div class="progress progress-circle color-light-blue"></div>
+                  <img class="pic__img" src="img/forum-2.png" alt="">
+                </div>
+              </div>
+              <div class="text-body-2 text-md-body-1 text--demibold text--uppercase color-white lh-1-5 relative p-6">
+                400 COMPANIES FROM <br>
+                40 RUSSIAN REGIONS AND <br>
+                25 COUNTRIES
+              </div>
+            </div>
+          </div>
+          <div class="grid-col-md-6">
+            <div class="forum__item relative radius-6 bg-blue overflow-hidden h-100">
+              <div class="bg-block">
+                <div class="pic pic--rect-y progress-container h-100">
+                  <div class="progress progress-circle color-light-blue"></div>
+                  <img class="pic__img" src="img/lines-2.png" alt="">
+                </div>
+              </div>
+              <div class="text-body-2 text-md-body-1 text--demibold text--uppercase color-light-blue lh-1-5 relative p-6">
+                128 RUSSIAN AND FOREIGN <br>
+                SPEAKERS AND 24 EVENTS <br>
+                OF BUSINESS PROGRAM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <% var opportunities = [
+    {
+      icon: 'loop',
+      title: 'Find',
+      text: 'new suppliers among Russian and foreign companies'
+    },
+    {
+      icon: 'atom',
+      title: 'Choose',
+      text: 'modern technologies and solutions for your business'
+    },
+    {
+      icon: 'clock',
+      title: 'Save',
+      text: 'your time and resources for searching new partners and clients'
+    },
+    {
+      icon: 'site-map',
+      title: 'Run',
+      text: 'into new distribution channels'
+    },
+    {
+      icon: 'hands',
+      title: 'Meet',
+      text: 'your potential clients face to face'
+    }
+  ] %>
+  <section class="opportunities relative color-white overflow-hidden">
+    <div class="bg-block d-none d-md-block fade-20">
+      <div class="pic pic--rect-y h-100">
+        <img class="pic__img" src="img/build.png" alt="">
+      </div>
+    </div>
+    <div class="relative">
+      <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-5 mb-md-10">VISITING SEAFOOD EXPO RUSSIA YOU CAN:</div>
+      <div class="grid grid-spacing-6">
+        <% for (var i = 0; i < opportunities.length; i++) { %>
+          <div class="grid-col-md-6 grid-col-lg-4">
+            <div class="opportunities__item flex flex-align-center radius-6 shadow h-100 py-5 px-3 py-md-10 px-md-7">
+              <svg class="opportunities__icon icon mr-5">
+                <use xlink:href="img/icons.svg#<%= opportunities[i].icon %>" />
+              </svg>
+              <div class="flex flex-column">
+                <div class="text-body-0 text-md-h2 color-light-blue text--bold text--uppercase"><%= opportunities[i].title %></div>
+                <div class="text-body-2 text-lg-body-1 text--demibold text--uppercase lh-1-5"><%= opportunities[i].text %></div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-block overflow-hidden">
+    <div class="visitors overflow-hidden mb-5 mb-md-10 pb-5 pb-md-10 -visitors-">
+      <div class="grid grid-spacing-10">
+        <div class="grid-col-12 grid-col-lg-5">
+          <div class="visitors__block w-100">
+            <div class="visitors__title font-alt text-h6 text-md-h4 text-lg-h1 text--bold lh-1-5 text--uppercase mb-5 mb-md-10 p-mb-10">
+              EXHIBITORS’ PROFILE BASED 
+              ON SECTORS:
+            </div>
+            <canvas class="visitors__chard mb-10" id="chart-sectors"></canvas>
+            <ul class="chard-list flex flex-column gap-4">
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--dark-blue mr-2"></span>
+                EQUIPMEN
+              </li>
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--green mr-2"></span>
+                SHIPBUILDING AND SHIP REPAIR
+              </li>
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--light-blue mr-2"></span>
+                AQUACULTURE
+              </li>
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--purple mr-2"></span>
+                SERVICES
+              </li>
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--yellow mr-2"></span>
+                OTHER
+              </li>
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--grey mr-2"></span>
+                PRODUCT DISTRIBUTION
+              </li>
+              <li class="flex flex-align-center text-small-1 text--uppercase lh-1-5">
+                <span class="chard-list__circle chard-list__circle--blue mr-2"></span>
+                CATCHING AND PROCESSING
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-col-12 grid-col-lg-7">
+          <div class="visitors__title font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--right lh-1-5 text--uppercase mb-5 mb-md-10 p-mb-10">EXHIBITORS' GEOGRAPHY:</div>
+          <img class="d-block w-100 mb-5 mb-md-10" src="img/geo-map.png" alt="">
+          <div class="visitors__info flex flex-wrap flex-align-center flex-justify-end gap-4 gap-md-8">
+            <div class="text-small-1 text--uppercase">400 COMPANIES FROM 40 RUSSIAN REGIONS AND 25 COUNTRIES</div>
+            <button class="btn btn--primary btn--fill text--regular px-10">Exhibitiors 2021</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-l3 shadow radius-6 p-5 p-md-10 mb-10">
+      <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">Business program</div>
+      <div class="text-body-2 text-md-body-1 lh-1-5 mb-5 mb-md-10">
+        gion, Nizhny Novgorod Region, Novgorod region, Novosibirsk region, Omsk region,Primorsky Krai, Republic of Karelia, Republic of Crimea, Mari El Republic,Republic of North Ossetia, Republic of Tatarstan, Rostov region, Ryazan Oblast, St. Petersburg,Sakhalin region, Sverdlovsk region, Sevastopol, Tver region, Khabarovsk region,Khanty-Mansi Autonomous Okrug, Chelyabinsk region, Republic of Yakutia,Yamalo-Nenets Autonomous Okrug, Yaroslavskaya oblast;<br>
+        Business program
+      </div>
+      <div class="text-body-2 text-md-body-1 lh-1-5 mb-5 mb-md-10">
+        GLOBAL FISHERY FORUM is the main congress event of the Russian fishery industry. Having an international importance, it focuses on key issues of development of the fishery industry and related sectors, economic efficiency and social stability, regulation of fishing and competition.This year the main topics will be inner market and industry infrastructure: shipbuilding, deep processing, logistics and storage and aqua- and mariculture.
+      </div>
+      <div class="text-body-0 text-md-subtitle-1 text--bold mb-5">Among forum topics 2021:</div>
+      <ul class="text-ul mb-5 mb-md-10">
+        <li class="text-ul-item text-body-2 text-md-body-1">Catching and processing</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">Building and designing of fishery fleet</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">import and trading enterprises</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">Logistics, including organization of uninterrupted cold chain</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">Aquaculture</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">Teaching new generation of russian fish consumers</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">Learning new markets and development of international cooperation</li>
+        <li class="text-ul-item text-body-2 text-md-body-1">Human and scientific resources of the industry</li>
+      </ul>
+      <button class="btn btn--primary btn--fill px-10">Program 2022</button>
+    </div>
+
+    <% var news = [
+      {
+        img: '1',
+        text: 'Fishery Exhibition in Qindao to be rescheduled'
+      },
+      {
+        img: '2',
+        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
+      },
+      {
+        img: '3',
+        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
+      },
+      {
+        img: '4',
+        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the Fishing Industry'
+      },
+    ] %>
+
+    <div class="news">
+      <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase mb-4">NEWS</div>
+      <div class="text-body-2 text-md-body-1 text--bold text--center text--uppercase mb-5 mb-md-10">LEARN MORE ABOUT OUR EVENT</div>
+      <div class="grid grid-spacing-4 grid-spacing-lg-7">
+        <% for (var i = 0; i < news.length; i++) { %>
+          <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
+            <%= _.template(require('./html-includes/news.html').default)({news, i}) %>
+          </div>
+        <% } %>
+      </div>
+    </div>
+
+  </section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

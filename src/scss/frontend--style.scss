@@ -372,6 +372,10 @@ body {
 		font-size: 60px;
 	}
 
+	&__btn {
+		width: 200px;
+	}
+
 	@media(max-width: $md) {
 		&__block {
 			height: 280px;
@@ -379,6 +383,10 @@ body {
 
 		&__item {
 			height: 200px;
+		}
+
+		&__btns {
+			justify-content: center;
 		}
 	}
 }
@@ -978,7 +986,7 @@ body {
 		}
 
 		&__block {
-			margin-right: auto;
+			margin: 0 auto;
 		}
 	}
 
@@ -991,6 +999,10 @@ body {
 
 		&__progress {
 			min-width: 180px;
+		}
+
+		&__info {
+			justify-content: center;
 		}
 	}
 }
@@ -1025,6 +1037,52 @@ body {
 			&--grey {
 				background-color: #58595B;
 			}
+
+			&--green {
+				background-color: #00A79E;
+			}
+		}
+	}
+}
+
+.opportunities {
+	background: linear-gradient(254.79deg, rgba(0, 0, 0, 0) 39.31%, rgba(0, 0, 0, 0.4) 100%), #005B95;
+
+	&::before {
+		content       : '';
+		position      : absolute;
+		width         : 100%;
+		height        : 570px;
+		background    : rgb(73, 221, 253, 0.3);
+		filter        : blur(100px);
+		top           : -400px;
+		left          : 0;
+		right         : 0;
+		pointer-events: none;
+	}
+
+	&__item {
+		background     : linear-gradient(107.73deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 57.04%);
+		backdrop-filter: blur(6px);
+	}
+
+	&__icon {
+		font-size: 86px;
+	}
+
+	@media(max-width: $lg) {
+		&__icon {
+			font-size: 60px;
+		}
+	}
+
+	@media(max-width: $md) {
+		&::before {
+			display: none;
+		}
+
+		&__icon {
+			font-size: 40px;
 		}
 	}
 }

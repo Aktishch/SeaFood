@@ -11,6 +11,7 @@ import mobileMenu from './mobile-menu';
 import scrollHeader from './scroll-header';
 import outNumber from './out-number';
 import filter from './filter';
+import search from './search';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -40,5 +41,6 @@ function loadHandler() {
 	scrollHeader.init()
 	outNumber.init()
 	filter.init()
+	search.init()
 
 }

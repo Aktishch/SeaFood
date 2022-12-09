@@ -194,38 +194,35 @@
 	}
 
 	&-checkbox-target {
-		// background         : linear-gradient(180deg, #FFFFFF 0%, rgba(176, 176, 176, 0.51) 100%), #FFFFFF;
-		background         : var(--bg3);
-		border             : 1px solid var(--color-text-40);
-		border-radius      : 4px;
+		background         : linear-gradient(180deg, rgba(0, 0, 0, 0) 18.23%, rgba(0, 0, 0, 0.1) 100%), #FFFFFF;
+		border             : 1px solid var(--color-gray);
+		border-radius      : 8px;
 		background-position: center;
 		display            : block;
-		min-width          : 18px;
-		width              : 18px;
-		height             : 18px;
+		min-width          : 24px;
+		width              : 24px;
+		height             : 24px;
 
 		display        : flex;
 		align-items    : center;
 		justify-content: center;
 
 		.icon {
-			font-size     : 12px;
+			font-size     : 16px;
 			color         : transparent;
 			pointer-events: none;
 			transition    : .2s ease;
 			transform     : scale(0);
 		}
-
-
-
-
 	}
 
 	&-input-checkbox:checked~&-checkbox-target {
-		animation: check .3s forwards;
+		animation       : check .3s forwards;
+		border          : none;
+		background-color: var(--color-primary);
 
 		.icon {
-			color    : var(--color-primary);
+			color    : var(--color-white);
 			transform: scale(1);
 		}
 	}

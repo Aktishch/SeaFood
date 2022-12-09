@@ -1,0 +1,219 @@
+<% var data = {
+
+  title: 'News',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="page-block">
+
+  <div class="news-nav relative z-1 mb-5 mb-md-10 pb-md-10">
+    <div class="grid grid-spacing-6">
+      <div class="grid-col-lg-7">
+        <div class="text-body-0 text-md-subtitle-1 text--bold text--uppercase mb-5 mb-md-8">POPULAR TOPICS:</div>
+        <div class="news-nav__btns flex flex-align-center flex-wrap gap-2 p-4 p-md-0">
+          <button class="news-nav__btn btn btn--text btn--contur btn--white-bg text-body-2 text--regular fade-40 px-4">#ForeignEvents</button>
+          <button class="news-nav__btn btn btn--primary btn--fill text-body-2 text--regular px-4">
+            #Aquaculture
+            <svg class="icon ml-2">
+              <use xlink:href="img/icons.svg#close" />
+            </svg>
+          </button>
+          <button class="news-nav__btn btn btn--text btn--contur btn--white-bg text-body-2 text--regular fade-40 px-4">#ExhibitorsNews</button>
+          <button class="news-nav__btn btn btn--text btn--contur btn--white-bg text-body-2 text--regular fade-40 px-4">#Catching</button>
+          <button class="news-nav__btn btn btn--text btn--contur btn--white-bg text-body-2 text--regular fade-40 px-4">#Processing</button>
+        </div>
+      </div>
+      <div class="grid-col-lg-5">
+        <div class="text-body-0 text-md-subtitle-1 text--bold text--uppercase mb-5 mb-md-8">SEARCH BY TOPICS:</div>
+        <div class="news-search relative -search-">
+          <div class="form-input-cover">
+            <input class="news-search__input form-input -search-input-" type="text" value="#ExhibitorsNews #Catching #ForeightEvents">
+            <div class="news-search__btns flex flex-align-center absolute h-100 z-1 pr-5 duration-3">
+              <button class="btn btn--text btn--link mr-md-6 -search-close-">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#close" />
+                </svg>
+              </button>
+              <svg class="news-search__arrow icon d-none d-md-block duration-3 ease">
+                <use xlink:href="img/icons.svg#to-right" />
+              </svg>
+            </div>
+          </div>
+          <div class="news-search__content overflow-auto absolute radius-2 shadow bg-l3 w-100 p-6 ease duration-3">
+            <div class="news-search__items flex flex-column">
+              <div class="text-body-1 text-md-subtitle-2 text--bold fade-40 mb-5">About Event</div>
+              <div class="flex flex-column gap-3 mb-6">
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Exhibitors2022</div>
+								</label>
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Important</div>
+								</label>
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Business Programm</div>
+								</label>
+              </div>
+              <div class="text-body-1 text-md-subtitle-2 text--bold fade-40 mb-5">Exhibition Sectors</div>
+              <div class="flex flex-column gap-3">
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Aquaculture</div>
+								</label>
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Catching</div>
+								</label>
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Processing</div>
+								</label>
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Shipbuilding & Shop Repair</div>
+								</label>
+                <label class="form-field form-checkbox">
+									<input type="checkbox" class="form-input-checkbox">
+									<div class="form-checkbox-target">
+										<svg class="icon">
+											<use xlink:href="./img/icons.svg#gal-ochka"></use>
+										</svg>
+									</div>
+									<div class="text-body-1 ml-2">Shipbuilding</div>
+								</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <% var news = [
+      {
+        img: '1',
+        text: 'Fishery Exhibition in Qindao to be rescheduled'
+      },
+      {
+        img: '2',
+        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
+      },
+      {
+        img: '3',
+        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
+      },
+      {
+        img: '4',
+        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the'
+      },
+      {
+        img: '1',
+        text: 'Fishery Exhibition in Qindao to be rescheduled'
+      },
+      {
+        img: '2',
+        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
+      },
+      {
+        img: '3',
+        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
+      },
+      {
+        img: '4',
+        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the'
+      },
+      {
+        img: '1',
+        text: 'Fishery Exhibition in Qindao to be rescheduled'
+      },
+      {
+        img: '2',
+        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
+      },
+      {
+        img: '3',
+        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
+      },
+      {
+        img: '4',
+        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the'
+      }
+    ] %>
+
+    <div class="news mb-10">
+      <div class="grid grid-spacing-4 grid-spacing-lg-7">
+        <% for (var i = 0; i < news.length; i++) { %>
+          <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
+            <%= _.template(require('./html-includes/news.html').default)({news, i}) %>
+          </div>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="pagination flex flex-align-center gap-1 gap-md-3">
+      <a class="pagination__btn pagination__btn--disabled btn btn--white btn--fill radius-2 p-0" href="">
+        <svg class="icon text-small-1 text-md-body-2">
+          <use xlink:href="img/icons.svg#to-left" />
+        </svg>
+      </a>
+      <a class="pagination__btn pagination__btn--active btn btn--primary btn--fill text--regular p-0" href="">1</a>
+      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">2</a>
+      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">3</a>
+      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">4</a>
+      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">5</a>
+      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">...</a>
+      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">10</a>
+      <a class="pagination__btn btn btn--white btn--fill radius-2 p-0" href="">
+        <svg class="icon text-small-1 text-md-body-2">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </a>
+    </div>
+
+</section>
+
+
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

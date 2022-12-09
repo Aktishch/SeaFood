@@ -546,6 +546,41 @@ body {
 		width: 235px;
 	}
 
+	&-nav {
+		&__btn {
+			border-radius: 100px;
+		}
+	}
+
+	&-search {
+		&__btns {
+			right : 0;
+			top   : 0;
+			bottom: 0;
+		}
+
+		&__input {
+			padding-right: 80px;
+		}
+
+		&__content {
+			top       : 90px;
+			height    : 370px;
+			opacity   : 0;
+			visibility: hidden;
+		}
+
+		&--open &__arrow {
+			transform: rotate(-90deg);
+		}
+
+		&--open &__content {
+			top       : 60px;
+			opacity   : 1;
+			visibility: visible;
+		}
+	}
+
 	@media(max-width: $lg) {
 		&__gradient {
 			height: 500px;
@@ -569,6 +604,20 @@ body {
 		&__pic {
 			width    : 100%;
 			min-width: auto;
+		}
+
+		&-nav {
+			&__btns {
+				flex-wrap: nowrap;
+				overflow : auto;
+				margin   : -16px;
+			}
+		}
+
+		&-search {
+			&__input {
+				padding-right: 40px;
+			}
 		}
 	}
 }
@@ -1202,6 +1251,34 @@ body {
 		&__item {
 			flex-direction: column;
 			align-items   : flex-start;
+		}
+	}
+}
+
+.pagination {
+	&__btn {
+		width : 36px;
+		height: 36px;
+
+		&--disabled {
+			opacity       : 0.5;
+			pointer-events: none;
+		}
+
+		&--active {
+			pointer-events: none;
+		}
+	}
+
+	@media(max-width: $md) {
+		& {
+			justify-content: center;
+		}
+
+		&__btn {
+			width    : 30px;
+			height   : 30px;
+			font-size: 14px;
 		}
 	}
 }

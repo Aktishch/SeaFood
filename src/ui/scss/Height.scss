@@ -1,4 +1,3 @@
-
 @mixin Height {
   &-100 {
     height: 100%;
@@ -14,7 +13,7 @@
 }
 
 .h {
-  @include AddMedia{
+  @include AddMedia {
     @include Height;
 
   }

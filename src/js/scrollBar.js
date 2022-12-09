@@ -9,7 +9,7 @@ const init = () => {
 
 const destroy = () => {
 
-    const html = document.querySelector('html') 
+    const html = document.querySelector('html')
     const documentWidth = document.documentElement.clientWidth
     const windowWidth = window.innerWidth
     const scrollBarWidth = windowWidth - documentWidth

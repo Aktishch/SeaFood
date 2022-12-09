@@ -116,12 +116,33 @@
     </div>
 </footer>
 
-<section class="cookies fixed z-3 py-0 pb-4">
+<section class="cookies fixed z-3 py-0 pb-4 -cookie-" id="cookie">
     <div class="flex flex-align-center flex-justify-between gap-2 bg-l3 shadow radius-4 p-3 p-md-5">
         <div class="text-small-1 text-md-body-1 text-lg-subtitle-1 text--regular lh-1-5">This website uses cookies to ensure you get the best experience</div>
-        <button class="btn btn--primary btn--fill">Okay</button>
+        <button class="btn btn--primary btn--fill -cookie-close-">Okay</button>
     </div>
 </section>
+
+<script>
+    document.addEventListener('click', (event) => {
+        
+        if (event.target.closest('.-cookie-close-')) {
+        
+            const buner = event.target.closest('.-cookie-')
+            const id = buner.id
+        
+            document.cookie = 'cookie_' + id + '_active=1; path=/; max-age=' + (7 * 24 * 60 * 60);
+        
+            document.querySelectorAll('#' + id).forEach(element => {
+            
+                element.parentElement.removeChild(element)
+            
+            })
+        
+        }
+    
+    })
+</script>
 
 </body>
 

@@ -11,7 +11,7 @@ const init = (cover) => {
 }
 
 function inputHandler(event) {
-  if((event.target.value[5] == '8' || event.target.value[5] == '7') && event.target.value[7] == '9' && event.target.value[9] == '_'){
+  if ((event.target.value[5] == '8' || event.target.value[5] == '7') && event.target.value[7] == '9' && event.target.value[9] == '_') {
     event.target.value = '9'
   }
 }

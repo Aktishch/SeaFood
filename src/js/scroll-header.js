@@ -1,6 +1,6 @@
 const init = () => {
 
-	const header = document.querySelector('.-header-') 
+	const header = document.querySelector('.-header-')
 
 	let prevScrollpos = window.pageYOffset
 

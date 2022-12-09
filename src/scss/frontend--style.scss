@@ -1137,7 +1137,7 @@ body {
 
 	@media(max-width: $lg) {
 		&__items {
-			background-color     : var(--color-dark-blue-90);
+			background-color     : var(--color-white);
 			grid-template-columns: 1fr;
 
 			border: {
@@ -1147,10 +1147,11 @@ body {
 		}
 
 		&__item {
-			color: var(--color-white);
+			color: var(--color-primary);
 
 			&--active {
-				text-decoration: underline;
+				color           : var(--color-white);
+				background-color: var(--color-primary);
 			}
 		}
 	}

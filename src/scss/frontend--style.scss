@@ -75,6 +75,11 @@ body {
 	right    : 0;
 	transform: translateY(var(--top));
 
+	&--top {
+		background-color: var(--color-white-60);
+		backdrop-filter : blur(4px);
+	}
+
 	&__logo {
 		width: 150px;
 	}

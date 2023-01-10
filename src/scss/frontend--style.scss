@@ -60,6 +60,10 @@
 	}
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--bg2);
 	color           : var(--color-text);
@@ -1238,12 +1242,38 @@ body {
 			width           : 32px;
 			height          : 32px;
 			background-color: var(--color-dark-blue-10);
+
+			& svg {
+				pointer-events: none;
+			}
+		}
+
+		&__link {
+			transition: 0.2s;
+			position  : absolute;
+			top       : 0;
+			right     : -130px;
+			width     : 120px;
+			height    : 25px;
+			overflow  : hidden;
+
+			&--hidden {
+				opacity   : 0;
+				visibility: hidden;
+			}
+
+			&-text {
+				position: absolute;
+				inset   : 0;
+			}
 		}
 
 		&__pic {
-			min-width: 54px;
-			width    : 54px;
-			height   : 54px;
+			min-width      : 54px;
+			width          : 54px;
+			height         : 54px;
+			background     : #DFE6EE url('../img/user.svg') no-repeat center;
+			background-size: 36px;
 		}
 	}
 
@@ -1286,4 +1316,21 @@ body {
 			font-size: 14px;
 		}
 	}
+}
+
+.person-card {
+	border-radius: 24px;
+
+	&__head {
+		border-bottom: 1px dashed rgba(32, 22, 44, 0.4);
+	}
+
+	&__pic {
+		min-width      : 74px;
+		width          : 74px;
+		height         : 74px;
+		background     : #DFE6EE url('../img/user.svg') no-repeat center;
+		background-size: 36px;
+	}
+
 }

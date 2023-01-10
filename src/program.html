@@ -394,7 +394,362 @@
         </div>
       </div>
       <div class="filter__card filter__card--2 d-none -filter-card-">
-        fdfsdfsdfsdfsdfds
+        <div class="materials__head flex flex-wrap flex-align-center flex-justify-between gap-4 mb-5 mb-md-10">
+          <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--center text--uppercase">18 October (Day 1)</div>
+          <div class="flex flex-align-center flex-justify-center flex-wrap gap-4 gap-lg-8">
+            <button class="materials__btn btn btn--primary btn--fill">Download Program</button>
+            <button class="materials__btn btn btn--primary btn--contur color-text">View Materials</button>
+          </div>
+        </div>
+
+        <div class="materials-info flex flex-column">
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60">9:00 - 10:00</div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5">REGISTRATION OF EVENT PARTICIPANTS</div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">10:00 - 11:30</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60">MAIN ARENA PASSAGE</div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-2">OFFICIAL OPENING CEREMONY AND TOUR OF THE EXPOSITION</div>
+                <div class="text-body-2 text-md-body-1 lh-1-5">
+                  An invitation to take part is extended to event organisers and participants, representatives of Russian ministries and departments, foreign delegations, heads of associations and unions, fishing and fish-processing companies
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8" id="material-3">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">11:30 - 13:00</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60 mb-3 mb-md-5">CONFERENCE HALL Е8-Е12</div>
+                <div class="flex flex-wrap flex-align-center gap-2">
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#star" />
+                    </svg>
+                  </div>
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#headphones" />
+                    </svg>
+                  </div>
+                  <button class="materials-info__shildik btn btn--link radius-2 -copy-btn-">
+                    <div class="materials-info__link materials-info__link--hidden radius-2 -copy-link-">
+                      <input class="-copy-value-" type="text" value="http://localhost:9000/program.html#material-3">
+                      <div class="materials-info__link-text flex flex-align-center flex-justify-center bg-blue color-white text-body-2">LINK COPIED</div>
+                    </div>
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#link" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-2">GLOBAL FISHERY FORUM PLENARY SESSION ‘SMART FISHING: RESEARCH, CATCHING, PROCESSING’</div>
+                <div class="accordion flex flex-column mb-6" data-toggle-cover>
+                  <div class="accordion__head flex flex-align-center color-primary text-body-1 text--bold cursor" data-toggle-link>
+                    <span class="accordion__text accordion__text--1">Legend and discussion topics</span>
+                    <span class="accordion__text accordion__text--2">Hide</span>
+                    <svg class="accordion__arrow text-body-2 icon duration-3 ml-2">
+                      <use xlink:href="img/icons.svg#to-right" />
+                    </svg>
+                  </div>
+                  <div class="accordion__body" data-toggle-content data-toggle-height="true" data-toggle-static="true">
+                    <div class="text-body-2 text-md-body-1 lh-1-5">
+                      An invitation to take part is extended to event organisers and participants, representatives of Russian ministries and departments, foreign delegations, heads of associations and unions, fishing and fish-processing companies
+                    </div>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">SPEAKERS:</div>
+                <div class="mb-6">
+                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                    <% for (var i = 0; i < 9; i++) { %>
+                      <div class="grid-col-md-6">
+                        <div class="flex flex-align-center link-hover-wrapper" data-fancybox-modal data-src="dialog-person.html" data-type="ajax">
+                          <div class="materials-info__pic pic pic--square radius-max mr-3">
+                            <img class="pic__img" src="img/personal/person-11.png" alt="">
+                          </div>
+                          <div class="flex flex-column">
+                            <div class="text-body-1 text--bold link-hover mb-1">Dmitry Patrushev</div>
+                            <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                          </div>
+                        </div>
+                      </div>
+                    <% } %>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">MODERATOR:</div>
+                <div class="mb-6">
+                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                    <div class="grid-col-md-6">
+                      <div class="flex flex-align-center">
+                        <div class="materials-info__pic pic pic--square radius-max mr-3">
+                          <img class="pic__img" src="img/personal/person-11.png" alt="">
+                        </div>
+                        <div class="flex flex-column">
+                          <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
+                          <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">ORGANIZERS:</div>
+                <div class="flex flex-wrap flex-align-center gap-4 gap-md-8">
+                  <img class="w-max" src="img/organizers/agency.png" alt="">
+                  <img class="w-max" src="img/organizers/univer.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8" id="material-4">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">14:00 - 15:30</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60 mb-3 mb-md-5">CONFERENCE HALL H4</div>
+                <div class="flex flex-wrap flex-align-center gap-2">
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#headphones" />
+                    </svg>
+                  </div>
+                  <button class="materials-info__shildik btn btn--link radius-2 -copy-btn-">
+                    <div class="materials-info__link materials-info__link--hidden radius-2 -copy-link-">
+                      <input class="-copy-value-" type="text" value="http://localhost:9000/program.html#material-4">
+                      <div class="materials-info__link-text flex flex-align-center flex-justify-center bg-blue color-white text-body-2">LINK COPIED</div>
+                    </div>
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#link" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-2">
+                  GLOBAL FISHERY FORUM PLENARY SESSION ‘SMART FISHING: RESEARCH, CATCHING, PROCESSING’
+                </div>
+                <div class="accordion flex flex-column mb-6" data-toggle-cover>
+                  <div class="accordion__head flex flex-align-center color-primary text-body-1 text--bold cursor" data-toggle-link>
+                    <span class="accordion__text accordion__text--1">Legend and discussion topics</span>
+                    <span class="accordion__text accordion__text--2">Hide</span>
+                    <svg class="accordion__arrow text-body-2 icon duration-3 ml-2">
+                      <use xlink:href="img/icons.svg#to-right" />
+                    </svg>
+                  </div>
+                  <div class="accordion__body" data-toggle-content data-toggle-height="true" data-toggle-static="true">
+                    <div class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+                      Supply patterns have changed dramatically in recent years, with restrictions stemming from the coronavirus in 2020–2021 and new sanctions imposed at the beginning of this year leading to structural changes. The cost and quality of logistics are taking on a different importance. Whether a fishing harbour is outdated or has maintained its relevance is an interesting topic for discussion and debate.
+                    </div>
+                    <div class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+                      The traditional way of transporting fish products in large consignments by refrigerated vessels is becoming less popular or being discontinued outright. The consumer, be it a processing plant or a distribution network, has already shown a preference for more mobile containerised shipments that can track and monitor product parameters and whereabouts. The increase in value-added products in 2020–2021 also adds new demands for technological solutions to preserve producer product quality.
+                    </div>
+                    <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-5">
+                      DISCUSSION TOPICS:
+                    </div>
+                    <ul class="text-ul mb-5">
+                      <li class="text-ul-item text-body-2 text-md-body-1">New approaches to forming supply chains</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Construction of a modern fishing fleet</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Rail transportation of fish products</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Fish product logistics and quality assurance</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Automobile transportation of fish products</li>
+                    </ul>
+                    <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-5">
+                      SPEAKERS:
+                    </div>
+                    <ol class="pl-5">
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Khasan Likhov, Deputy Head, Federal Agency for FisheriesSupply Chains in the Changing Market Environment
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Sergey Sennikov, Deputy Director for International Affairs and Public Relations, NOREBOProduction of Frozen Fish on a Board of a Modern Fishing Vessel
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Andrey Velikorodny, Chairman of the Board, Crystal AllianceTransport and Refrigerated Fleet in 2030 — New Modern Vessels or Average Age 45+
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Vladimir Valter, CEO, Seroglazka TerminalModern Conditions for Building a Logistics Chain to Produce, Transport, and Store Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Dmitry Gorokh, Deputy Director, Corporate Transport Services Centre – Branch of Russian RailwaysThe Realities of the Rail Transportation of Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Andrey Grechkin, General Director, Dalreftrans‘Free’ Reserves to Increase the Efficiency of Refrigerated Container Operators: the Improvement of Capacity Utilization, Reducing of Empty Run Ratio and Turnover Boost
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Oleg Emtsev, Director, North-West Interregional Department, Russian Federal Service for Veterinary and Phytosanitary SupervisionThe Role of Logistics in Ensuring the Quality of Finished Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Sergey Popov, Director, Refrigerated Transportation Group, Eurosib SPb-Transport SystemsSmart Transportation of Perishable Goods by Rail: Challenges and Solutions
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Maxim Korneev, Development Director, Russian RefrigeratorsSmart Railcar for Smart Logistics
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Vasily Panov, Deputy General Director, AdvantumTemperature Control during the Transportation and Storage of Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Evgeny Prikhodko, Executive Director of CRFT, Russian Agricultural Bank
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">SPEAKERS:</div>
+                <div class="mb-6">
+                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                    <% for (var i = 0; i < 9; i++) { %>
+                      <div class="grid-col-md-6">
+                        <div class="flex flex-align-center">
+                          <div class="materials-info__pic pic pic--square radius-max mr-3">
+                            <img class="pic__img" src="img/personal/person-11.png" alt="">
+                          </div>
+                          <div class="flex flex-column">
+                            <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
+                            <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                          </div>
+                        </div>
+                      </div>
+                    <% } %>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">MODERATOR:</div>
+                <div class="mb-6">
+                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                    <div class="grid-col-md-6">
+                      <div class="flex flex-align-center">
+                        <div class="materials-info__pic pic pic--square radius-max mr-3">
+                          <img class="pic__img" src="img/personal/person-11.png" alt="">
+                        </div>
+                        <div class="flex flex-column">
+                          <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
+                          <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">ORGANIZERS:</div>
+                <div class="flex flex-wrap flex-align-center gap-4 gap-md-8">
+                  <img class="w-max" src="img/organizers/agency.png" alt="">
+                  <img class="w-max" src="img/organizers/ac.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">14:00 - 15:30</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60 mb-2">CONFERENCE HALL H4</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase lh-1-5 mb-5">THE EVENT WILL BE HELD IN RUSSIAN</div>
+                <div class="flex flex-wrap flex-align-center gap-2">
+                  <div class="materials-info__shildik flex flex-align-center flex-justify-center radius-2">
+                    <svg class="icon text-h6">
+                      <use xlink:href="img/icons.svg#link" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-2">
+                  ANNUAL RUSSIAN MARITIME REGISTER OF SHIPPING CONFERENCE
+                </div>
+                <div class="accordion flex flex-column mb-6" data-toggle-cover>
+                  <div class="accordion__head flex flex-align-center color-primary text-body-1 text--bold cursor" data-toggle-link>
+                    <span class="accordion__text accordion__text--1">Legend and discussion topics</span>
+                    <span class="accordion__text accordion__text--2">Hide</span>
+                    <svg class="accordion__arrow text-body-2 icon duration-3 ml-2">
+                      <use xlink:href="img/icons.svg#to-right" />
+                    </svg>
+                  </div>
+                  <div class="accordion__body" data-toggle-content data-toggle-height="true" data-toggle-static="true">
+                    <div class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+                      Supply patterns have changed dramatically in recent years, with restrictions stemming from the coronavirus in 2020–2021 and new sanctions imposed at the beginning of this year leading to structural changes. The cost and quality of logistics are taking on a different importance. Whether a fishing harbour is outdated or has maintained its relevance is an interesting topic for discussion and debate.
+                    </div>
+                    <div class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+                      The traditional way of transporting fish products in large consignments by refrigerated vessels is becoming less popular or being discontinued outright. The consumer, be it a processing plant or a distribution network, has already shown a preference for more mobile containerised shipments that can track and monitor product parameters and whereabouts. The increase in value-added products in 2020–2021 also adds new demands for technological solutions to preserve producer product quality.
+                    </div>
+                    <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-5">
+                      DISCUSSION TOPICS:
+                    </div>
+                    <ul class="text-ul mb-5">
+                      <li class="text-ul-item text-body-2 text-md-body-1">New approaches to forming supply chains</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Construction of a modern fishing fleet</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Rail transportation of fish products</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Fish product logistics and quality assurance</li>
+                      <li class="text-ul-item text-body-2 text-md-body-1">Automobile transportation of fish products</li>
+                    </ul>
+                    <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-5">
+                      SPEAKERS:
+                    </div>
+                    <ol class="pl-5">
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Khasan Likhov, Deputy Head, Federal Agency for FisheriesSupply Chains in the Changing Market Environment
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Sergey Sennikov, Deputy Director for International Affairs and Public Relations, NOREBOProduction of Frozen Fish on a Board of a Modern Fishing Vessel
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Andrey Velikorodny, Chairman of the Board, Crystal AllianceTransport and Refrigerated Fleet in 2030 — New Modern Vessels or Average Age 45+
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Vladimir Valter, CEO, Seroglazka TerminalModern Conditions for Building a Logistics Chain to Produce, Transport, and Store Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Dmitry Gorokh, Deputy Director, Corporate Transport Services Centre – Branch of Russian RailwaysThe Realities of the Rail Transportation of Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Andrey Grechkin, General Director, Dalreftrans‘Free’ Reserves to Increase the Efficiency of Refrigerated Container Operators: the Improvement of Capacity Utilization, Reducing of Empty Run Ratio and Turnover Boost
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Oleg Emtsev, Director, North-West Interregional Department, Russian Federal Service for Veterinary and Phytosanitary SupervisionThe Role of Logistics in Ensuring the Quality of Finished Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Sergey Popov, Director, Refrigerated Transportation Group, Eurosib SPb-Transport SystemsSmart Transportation of Perishable Goods by Rail: Challenges and Solutions
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Maxim Korneev, Development Director, Russian RefrigeratorsSmart Railcar for Smart Logistics
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Vasily Panov, Deputy General Director, AdvantumTemperature Control during the Transportation and Storage of Fish Products
+                      </li>
+                      <li class="text-body-2 text-md-body-1 lh-1-5">
+                        Evgeny Prikhodko, Executive Director of CRFT, Russian Agricultural Bank
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">ORGANIZERS:</div>
+                <div class="flex flex-wrap flex-align-center gap-4 gap-md-8">
+                  <img class="w-max" src="img/organizers/agr.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materials-info__item mb-4 mb-md-8 p-4 pb-md-8">
+            <div class="grid grid-spacing-3 grid-spacing-lg-10">
+              <div class="grid-col-lg-3">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--regular fade-60 mb-2">18:00 - 20:30</div>
+                <div class="text-body-2 text-md-body-1 text--uppercase fade-60">CONFERENCE HALL Е8-Е12</div>
+              </div>
+              <div class="grid-col-lg-9">
+                <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-2">NETWORKING</div>
+                <div class="text-body-2 text-md-body-1 lh-1-5">
+                  Informal communication and networking for Global Fishery Forum & Seafood Expo Russia participants and guests. Free admission by participant badge. Guests are welcomed at 17:45.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="filter__card filter__card--3 d-none -filter-card-">
         fdfsdfsdfsdfsdfds

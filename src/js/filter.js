@@ -58,6 +58,28 @@ const init = () => {
 
         })
 
+        if (window.top.location.hash.substr(1)) {
+
+            for (const [index, card] of cards.entries()) {
+
+                if (card.querySelector(`#${window.top.location.hash.substr(1)}`)) {
+
+                    const currentBtn = filter.getElementsByClassName('filter__item--active')
+
+                    currentBtn[0].className = currentBtn[0].className.replace('filter__item--active', '')
+                    btns[index].classList.add('filter__item--active')
+
+                    line.style.left = `${btns[index].offsetLeft}px`
+                    line.style.width = `${btns[index].offsetWidth}px`
+
+                    cards[0].classList.add('d-none')
+                    card.classList.remove('d-none')
+
+                }
+            }
+
+        }
+
     }
 
 }

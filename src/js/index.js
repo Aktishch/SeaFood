@@ -12,6 +12,7 @@ import outNumber from './out-number';
 import filter from './filter';
 import search from './search';
 import copyLink from './copy-link';
+import bxPanel from './bx-panel';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -42,5 +43,6 @@ function loadHandler() {
 	filter.init()
 	search.init()
 	copyLink.init()
+	bxPanel.init()
 
 }

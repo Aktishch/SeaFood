@@ -6,7 +6,7 @@ const init = () => {
 
         const header = document.querySelector('.-header-')
 
-        header.style.top = `${panel.offsetHeight}`
+        header.style.top = `${panel.offsetHeight}px`
 
     }
 

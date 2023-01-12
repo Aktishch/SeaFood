@@ -8,7 +8,6 @@ import tab from 'npm-kit-tab';
 import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
 import mobileMenu from './mobile-menu';
-import scrollHeader from './scroll-header';
 import outNumber from './out-number';
 import filter from './filter';
 import search from './search';
@@ -39,7 +38,6 @@ function loadHandler() {
 	ripple.deAttach('.btn--link')
 
 	mobileMenu.init()
-	scrollHeader.init()
 	outNumber.init()
 	filter.init()
 	search.init()

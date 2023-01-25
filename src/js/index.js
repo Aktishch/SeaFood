@@ -13,6 +13,7 @@ import filter from './filter';
 import search from './search';
 import copyLink from './copy-link';
 import bxPanel from './bx-panel';
+import videoPlay from './video-play';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -44,5 +45,6 @@ function loadHandler() {
 	search.init()
 	copyLink.init()
 	bxPanel.init()
+	videoPlay.init()
 
 }

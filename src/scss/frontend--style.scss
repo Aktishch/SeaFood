@@ -544,7 +544,7 @@ body {
 	}
 
 	&__gradient {
-		background: linear-gradient(180deg, rgba(32, 22, 44, 0) 34.86%, #20162C 64.38%);
+		background: linear-gradient(180deg, rgba(32, 22, 44, 0) 34.86%, #20162C 48.38%);
 	}
 
 	&__btn {
@@ -588,7 +588,8 @@ body {
 
 	@media(max-width: $lg) {
 		&__gradient {
-			height: 500px;
+			background: linear-gradient(180deg, rgba(32, 22, 44, 0) 34.86%, #20162C 63.38%);
+			height    : 500px;
 		}
 
 		&__pic {

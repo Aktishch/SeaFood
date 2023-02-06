@@ -398,8 +398,6 @@ body {
 
 .expo {
 	&-slide {
-		min-height: 300px;
-
 		&--blue {
 			background-color: #0066A2;
 		}
@@ -422,12 +420,6 @@ body {
 	@media(hover) {
 		&-slide:hover {
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-		}
-	}
-
-	@media(max-width: $md) {
-		&-slide {
-			min-height: 270px;
 		}
 	}
 }
@@ -1330,4 +1322,33 @@ body {
 		background-size: 36px;
 	}
 
+}
+
+.fish {
+	&__title {
+		font-weight: 300;
+	}
+
+	@media(min-width: $md) {
+		&__content {
+			padding  : 60px;
+			max-width: 790px;
+		}
+	}
+
+	@media(max-width: $md) {
+		&__content {
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.map {
+	min-height: 610px;
+
+	@media(min-width: $lg) {
+		&__title {
+			font-size: 64px;
+		}
+	}
 }

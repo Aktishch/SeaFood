@@ -34,20 +34,68 @@
   </div>
 </section>
 
+<% var map = [
+  {
+    letter: 'e',
+    top: ['e', 'f', 'f', 'i', 'c', 'i'],
+    bottom: ['n', 't']
+  },
+  {
+    letter: 'u',
+    top: ['i', 'n', 'c', 'l'],
+    bottom: ['s', 'i', 'v', 'e']
+  },
+  {
+    letter: 'r',
+    top: ['i', 'n', 't', 'e'],
+    bottom: ['n', 'a', 't', 'i', 'o', 'n', 'a', 'l']
+  },
+  {
+    letter: 'a',
+    top: ['s', 'u', 's', 't'],
+    bottom: ['i', 'n', 'a', 'b', 'l', 'e']
+  },
+  {
+    letter: 's',
+    top: ['r', 'e', 's', 'p', 'o', 'n'],
+    bottom: ['i', 'b', 'l', 'e']
+  },
+  {
+    letter: 'i',
+    top: ['u', 'n', 'b'],
+    bottom: ['a', 's', 'e', 'd']
+  },
+  {
+    letter: 'a',
+    top: ['a', 'd', 'v'],
+    bottom: ['n', 'c', 'e', 'd']
+  },
+] %>
+
 <section class="map flex flex-align-center flex-justify-center bg-text relative">
-  <div class="bg-block">
+  <div class="map__bg bg-block">
     <div class="pic pic--rect-x h-100">
       <img class="pic__img" src="img/map-blue.png" alt="">
     </div>
   </div>
-  <div class="flex flex-align-center flex-justify-center relative color-white w-100">
-    <div class="map__title text-h6 text-md-h4 text--uppercase text--bold">SEAFOOD EXPO</div>
-    <div class="map__title flex flex-align-center text-h6 text-md-h4 text--uppercase text--bold">
-      <div class="map__item relative">
-        <div class="map__top absolute">E F F I C I</div>
-        <div class="map__bottom absolute">N T</div>
-        <div class="color-primary relative">E</div>
-      </div>
+  <div class="map__content flex flex-align-center flex-justify-between gap-5 gap-md-10 relative color-white">
+    <div class="map__title text-h2 text--uppercase text--bold">SEAFOOD EXPO</div>
+    <div class="map__title map__title--letters flex flex-align-center gap-6 gap-md-8 relative text-h2 text--uppercase text--bold">
+      <% for (var i = 0; i < map.length; i++) { %>
+        <div class="map__item relative">
+          <div class="map__letter color-primary relative"><%= map[i].letter %></div>
+          <div class="map__top flex flex-column flex-align-center flex-justify-center gap-1 absolute text-body-0 text-lg-h6 text--center text--regular fade-20 ease duration-3">
+            <% for (var j = 0; j < map[i].top.length; j++) { %>
+              <span><%= map[i].top[j] %></span>
+            <% } %>
+          </div>
+          <div class="map__bottom flex flex-column flex-align-center flex-justify-center gap-1 absolute text-body-0 text-lg-h6 text--center text--regular fade-20 ease duration-3">
+            <% for (var j = 0; j < map[i].bottom.length; j++) { %>
+              <span><%= map[i].bottom[j] %></span>
+            <% } %>
+          </div>
+        </div>
+      <% } %>
     </div>
   </div>
 </section>
@@ -347,6 +395,37 @@
     </div>
   </div>
   <button class="news__btn btn btn--primary btn--fill mt-5 mt-md-10 mx-auto">Load More</button>
+</section>
+
+<section class="about-us pt-0">
+  <div class="grid grid-spacing-8">
+    <div class="grid-col-lg-6">
+      <a class="card flex-row flex-align-center p-4 waved" href="">
+        <div class="about-us__img flex flex-align-center flex-justify-center color-white radius-6 mr-5 mr-md-10">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#home" />
+          </svg>
+        </div>
+        <div class="flex flex-column">
+          <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-4">VENUE</div>
+          <button class="btn btn--primary btn--fill px-10 waved">Load More</button>
+        </div>
+      </a>
+    </div>
+    <div class="grid-col-lg-6">
+      <a class="card flex-row flex-align-center p-4 waved" href="">
+        <div class="about-us__img flex flex-align-center flex-justify-center color-white radius-6 mr-5 mr-md-10">
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#user" />
+          </svg>
+        </div>
+        <div class="flex flex-column">
+          <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-4">contacts</div>
+          <button class="btn btn--primary btn--fill px-10 waved">Load More</button>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
 <%= _.template(require('./html-includes/footer.html').default)({data}) %>

@@ -1344,11 +1344,148 @@ body {
 }
 
 .map {
-	min-height: 610px;
+	min-height: 650px;
+
+	&__top,
+	&__bottom {
+		left     : 50%;
+		transform: translateX(-50%);
+	}
+
+	&__letter {
+		animation: letter 2s linear infinite;
+	}
+
+	&__top {
+		bottom: 100%;
+	}
+
+	&__bottom {
+		top: 100%;
+	}
+
+	&__top span:nth-last-of-type(-n+2),
+	&__bottom span:nth-child(-n+2) {
+		background             : linear-gradient(-45deg, var(--color-white) 0%, var(--color-primary-40) 65.51%), var(--color-white);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: rgba(0, 0, 0, 0);
+		background-clip        : text;
+		text-fill-color        : rgba(0, 0, 0, 0);
+	}
 
 	@media(min-width: $lg) {
 		&__title {
 			font-size: 64px;
+		}
+	}
+
+	@media(max-width: $md) {
+		&__bg {
+			opacity: 0.7;
+		}
+
+		&__content {
+			flex-direction: column;
+		}
+
+		&__title {
+			&--letters {
+				min-height: 440px;
+			}
+		}
+	}
+
+	@media(hover) {
+
+		&__item:hover &__top,
+		&__item:hover &__bottom {
+			opacity: 1;
+		}
+	}
+
+	@media(pointer:coarse) {
+
+		&__item:nth-child(2) &__top,
+		&__item:nth-child(2) &__bottom {
+			animation-delay: 0.2s;
+		}
+
+		&__item:nth-child(3) &__top,
+		&__item:nth-child(3) &__bottom {
+			animation-delay: 0.4s;
+		}
+
+		&__item:nth-child(4) &__top,
+		&__item:nth-child(4) &__bottom {
+			animation-delay: 0.6s;
+		}
+
+		&__item:nth-child(5) &__top,
+		&__item:nth-child(5) &__bottom {
+			animation-delay: 0.8s;
+		}
+
+		&__item:nth-child(6) &__top,
+		&__item:nth-child(6) &__bottom {
+			animation-delay: 1s;
+		}
+
+		&__item:nth-child(7) &__top,
+		&__item:nth-child(7) &__bottom {
+			animation-delay: 1.2s;
+		}
+
+		&__top,
+		&__bottom {
+			animation: letters 2s linear infinite;
+		}
+
+		&__top,
+		&__bottom {
+			opacity: 1;
+		}
+	}
+}
+
+@keyframes letter {
+
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes letters {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+.about-us {
+	&__img {
+		font-size : 94px;
+		min-width : 190px;
+		width     : 190px;
+		height    : 190px;
+		background: linear-gradient(271.82deg, rgba(0, 0, 0, 0) 3.08%, rgba(0, 0, 0, 0.3) 96.92%), #0065A5;
+	}
+
+	@media(max-width: $md) {
+		&__img {
+			font-size: 50px;
+			min-width: 100px;
+			width    : 100px;
+			height   : 100px;
 		}
 	}
 }

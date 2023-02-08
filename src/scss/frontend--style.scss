@@ -1489,3 +1489,13 @@ body {
 		}
 	}
 }
+
+.google-map {
+	height: 460px;
+
+	@media(max-width: $md) {
+		& {
+			height: 380px;
+		}
+	}
+}

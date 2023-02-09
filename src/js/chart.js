@@ -17,7 +17,7 @@ const init = () => {
             type: 'doughnut',
             data: {
                 datasets: [{
-                    data: [35.5, 23.6, 15.9, 11.9, 9.1, 3.9],
+                    data: [33, 27, 15.6, 13.4, 5.9, 5.1],
                     backgroundColor: ['#00529C', '#2E3092', '#00AEEF', '#662D91', '#F7941E', '#58595B'],
                     borderWidth: 2,
                     borderColor: '#ffffff'

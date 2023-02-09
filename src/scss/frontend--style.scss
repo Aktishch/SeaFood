@@ -1011,10 +1011,6 @@ body {
 }
 
 .visitors {
-	&__title {
-		min-height: 110px;
-	}
-
 	&__number {
 		min-width: 80px;
 	}
@@ -1049,11 +1045,6 @@ body {
 	}
 
 	@media(max-width: $lg) {
-		&__title {
-			min-height: auto;
-			text-align: center;
-		}
-
 		&__block {
 			margin: 0 auto;
 		}

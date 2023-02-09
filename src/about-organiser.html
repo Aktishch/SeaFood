@@ -1,0 +1,183 @@
+<% var data = {
+
+  title: 'About organiser',
+  head: '<button class="page-head__btn btn btn--primary btn--fill">Book a stand</button>'
+
+} %>
+
+<%= _.template(require('./html-includes/header.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/page-head.html').default)({data}) %>
+
+<section class="we-are">
+  <div class="we-are__block color-white radius-4 overflow-hidden py-7 py-md-10 px-5 px-md-10">
+    <div class="we-are__items flex flex-align-center gap-5 gap-md-10 mb-5 mb-md-7">
+      <img class="we-are__img w-100" src="img/sed.png" alt="">
+      <div class="flex flex-column">
+        <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold mb-3">Who we are?</div>
+        <div class="text-body-2 text-md-body-1 lh-1-5 mb-5">
+          Seafood Expo Development is a company specialized in events for fishery industry and licensed to hold large-scale events in Turkey. We are international team with diverse organizing experience.
+        </div>
+        <div class="text-body-2 text-md-body-1 lh-1-5">
+          Same as our exhibitions we represent different cultures: we speak Turkish, English, German, Russian, French, Chinese, Ukrainian, Uzbek and Spanish. Different cultural background helps us better understand the needs of our clients. For us making events is not just a job but lifelong story.
+        </div>
+      </div>
+    </div>
+    <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold mb-3">Our mission — thinking global</div>
+    <div class="text-body-2 text-md-body-1 lh-1-5">
+      We strongly believe that constant communication is a key aspect of successful business. The challenges of modern world require creative solutions and we hope that bringing large international community together we can provide fresh thinking. Supporting sustainable fishery, food safety, modern technologies and ecologically-friendly initiatives we want to contribute to the development of world fishery industry.
+    </div>
+  </div>
+</section>
+
+<% var map = [
+  {
+    letter: 'e',
+    top: ['e', 'f', 'f', 'i', 'c', 'i'],
+    bottom: ['n', 't']
+  },
+  {
+    letter: 'u',
+    top: ['i', 'n', 'c', 'l'],
+    bottom: ['s', 'i', 'v', 'e']
+  },
+  {
+    letter: 'r',
+    top: ['i', 'n', 't', 'e'],
+    bottom: ['n', 'a', 't', 'i', 'o', 'n', 'a', 'l']
+  },
+  {
+    letter: 'a',
+    top: ['s', 'u', 's', 't'],
+    bottom: ['i', 'n', 'a', 'b', 'l', 'e']
+  },
+  {
+    letter: 's',
+    top: ['r', 'e', 's', 'p', 'o', 'n'],
+    bottom: ['i', 'b', 'l', 'e']
+  },
+  {
+    letter: 'i',
+    top: ['u', 'n', 'b'],
+    bottom: ['a', 's', 'e', 'd']
+  },
+  {
+    letter: 'a',
+    top: ['a', 'd', 'v'],
+    bottom: ['n', 'c', 'e', 'd']
+  },
+] %>
+
+<section class="map flex flex-align-center flex-justify-center bg-grey relative">
+  <div class="map__bg bg-block">
+    <div class="pic pic--rect-x h-100">
+      <img class="pic__img" src="img/map-grey.png" alt="">
+    </div>
+  </div>
+  <div class="map__content flex flex-align-center flex-justify-between gap-5 gap-md-10 relative color-dark-blue">
+    <div class="map__title text-h2 text--uppercase text--bold">SEAFOOD EXPO</div>
+    <div class="map__title map__title--letters flex flex-align-center gap-6 gap-md-8 relative text-h2 text--uppercase text--bold">
+      <% for (var i = 0; i < map.length; i++) { %>
+        <div class="map__item relative">
+          <div class="map__letter color-primary relative"><%= map[i].letter %></div>
+          <div class="map__top flex flex-column flex-align-center flex-justify-center gap-1 absolute text-body-0 text-lg-h6 text--center text--regular fade-20 ease duration-3">
+            <% for (var j = 0; j < map[i].top.length; j++) { %>
+              <span><%= map[i].top[j] %></span>
+            <% } %>
+          </div>
+          <div class="map__bottom flex flex-column flex-align-center flex-justify-center gap-1 absolute text-body-0 text-lg-h6 text--center text--regular fade-20 ease duration-3">
+            <% for (var j = 0; j < map[i].bottom.length; j++) { %>
+              <span><%= map[i].bottom[j] %></span>
+            <% } %>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<section class="page-block overflow-hidden">
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">EXHIBITION MANAGEMENT</div>
+
+  <% var personal = [
+    {
+      img: '1',
+      email: 'i.fetisoff@rusfishexpo.com',
+      name: 'Ivan Fetisov',
+      work: 'CEO'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">SALES TEAM</div>
+
+  <% var personal = [
+    {
+      img: '1',
+      email: 'i.fetisoff@rusfishexpo.com',
+      name: 'Ivan Fetisov',
+      work: 'CEO'
+    },
+    {
+      img: '2',
+      email: 'z.fetisova@rusfishexpo.com',
+      name: 'Zarina Fetisova',
+      work: 'Deputy General Director'
+    },
+    {
+      img: '3',
+      email: 'z.fetisova@rusfishexpo.com',
+      name: 'Zarina Fetisova',
+      work: 'Deputy General Director'
+    },
+    {
+      img: '4',
+      email: 'z.fetisova@rusfishexpo.com',
+      name: 'Zarina Fetisova',
+      work: 'Deputy General Director'
+    },
+    {
+      img: '5',
+      email: 'z.fetisova@rusfishexpo.com',
+      name: 'Zarina Fetisova',
+      work: 'Deputy General Director'
+    },
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">Marketing</div>
+
+  <% var personal = [
+    {
+      img: '1',
+      email: 'i.fetisoff@rusfishexpo.com',
+      name: 'Ivan Fetisov',
+      work: 'CEO'
+    },
+    {
+      img: '2',
+      email: 'z.fetisova@rusfishexpo.com',
+      name: 'Zarina Fetisova',
+      work: 'Deputy General Director'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+
+  <div class="font-alt text-h6 text-md-h4 text-lg-h1 text--bold text--uppercase mb-5 mb-md-10">Technical Service</div>
+
+  <% var personal = [
+    {
+      img: '1',
+      email: 'i.fetisoff@rusfishexpo.com',
+      name: 'Ivan Fetisov',
+      work: 'CEO'
+    }
+  ] %>
+
+  <%= _.template(require('./html-includes/personal.html').default)({personal}) %>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)({data}) %>

@@ -1357,7 +1357,7 @@ body {
 
 	&__top span:nth-last-of-type(-n+2),
 	&__bottom span:nth-child(-n+2) {
-		background             : linear-gradient(-45deg, var(--color-white) 0%, var(--color-primary-40) 65.51%), var(--color-white);
+		background             : linear-gradient(-45deg, currentColor 0%, var(--color-primary-40) 65.51%), currentColor;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(0, 0, 0, 0);
 		background-clip        : text;
@@ -1487,6 +1487,39 @@ body {
 	@media(max-width: $md) {
 		& {
 			height: 380px;
+		}
+	}
+}
+
+.we-are {
+	&__block {
+		background: linear-gradient(271.62deg, var(--color-dark-blue-90) 2.75%, rgba(2, 67, 143, 0) 64.58%), var(--color-text);
+	}
+
+	&__img {
+		max-width: 200px;
+	}
+
+	@media(max-width: $lg) {
+		&__items {
+			flex-direction: column;
+			align-items   : flex-start;
+		}
+
+		&__img {
+			max-width: 120px;
+		}
+	}
+
+	@media(max-width: $md) {
+		& {
+			padding-top   : 0;
+			padding-bottom: 0;
+		}
+
+		&__block {
+			border-radius: 0;
+			margin       : 0 -15px;
 		}
 	}
 }

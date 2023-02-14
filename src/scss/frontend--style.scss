@@ -92,7 +92,19 @@ body {
 }
 
 .nav {
-	max-width: 730px;
+	max-width: 500px;
+
+	&__list {
+		width     : 180px;
+		visibility: hidden;
+	}
+
+	@media(hover) {
+		&__item:hover &__list {
+			opacity   : 1;
+			visibility: visible;
+		}
+	}
 }
 
 .language {

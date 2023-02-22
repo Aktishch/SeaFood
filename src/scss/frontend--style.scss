@@ -97,8 +97,11 @@ body {
 		top : 70px;
 	}
 
-	&__list.toggle-active {
-		top: 20px;
+	@media(hover) {
+		&__item:hover &__list {
+			opacity: 1;
+			top    : 25px;
+		}
 	}
 }
 

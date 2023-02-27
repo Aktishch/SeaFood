@@ -93,14 +93,16 @@ body {
 
 .nav {
 	&__list {
-		left: 0;
-		top : 70px;
+		left      : 0;
+		top       : 70px;
+		visibility: hidden;
 	}
 
 	@media(hover) {
 		&__item:hover &__list {
-			opacity: 1;
-			top    : 25px;
+			opacity   : 1;
+			visibility: visible;
+			top       : 25px;
 		}
 	}
 }

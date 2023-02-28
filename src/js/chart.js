@@ -24,6 +24,7 @@ const init = () => {
                 }]
             },
             options: {
+                events: [],
                 plugins: {
                     datalabels: {
                         color: '#ffffff',

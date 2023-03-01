@@ -617,9 +617,21 @@ body {
 		}
 	}
 
+	&-empty {
+		&__img {
+			max-width: 250px;
+		}
+	}
+
 	@media(hover) {
 		&__card:hover &__image {
 			transform: scale(1.1);
+		}
+	}
+
+	@media(min-width: $lg) {
+		&-empty {
+			padding: 60px 40px;
 		}
 	}
 
@@ -660,6 +672,12 @@ body {
 		&-search {
 			&__input {
 				padding-right: 40px;
+			}
+		}
+
+		&-empty {
+			&__img {
+				max-width: 200px;
 			}
 		}
 	}

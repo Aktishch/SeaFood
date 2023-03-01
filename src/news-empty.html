@@ -130,87 +130,14 @@
       </div>
     </div>
   </div>
-  
-  <% var news = [
-      {
-        img: '1',
-        text: 'Fishery Exhibition in Qindao to be rescheduled'
-      },
-      {
-        img: '2',
-        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
-      },
-      {
-        img: '3',
-        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
-      },
-      {
-        img: '4',
-        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the'
-      },
-      {
-        img: '1',
-        text: 'Fishery Exhibition in Qindao to be rescheduled'
-      },
-      {
-        img: '2',
-        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
-      },
-      {
-        img: '3',
-        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
-      },
-      {
-        img: '4',
-        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the'
-      },
-      {
-        img: '1',
-        text: 'Fishery Exhibition in Qindao to be rescheduled'
-      },
-      {
-        img: '2',
-        text: 'VI Global Fishery Forum & Seafood Expo Russia 2023: Start of Sales'
-      },
-      {
-        img: '3',
-        text: 'Dates Set for VI Global Fishery Forum & Seafood Expo Russia 2023'
-      },
-      {
-        img: '4',
-        text: 'V Global Fishery Forum & Seafood Expo Russia 2022: New Opportunities for the'
-      }
-    ] %>
 
-    <div class="news mb-10">
-      <div class="grid grid-spacing-4 grid-spacing-lg-7">
-        <% for (var i = 0; i < news.length; i++) { %>
-          <div class="grid-col-12 grid-col-md-6 grid-col-lg-3">
-            <%= _.template(require('./html-includes/news.html').default)({news, i}) %>
-          </div>
-        <% } %>
-      </div>
+  <div class="news-empty flex flex-column flex-align-center flex-justify-center bg-l3 radius-5 py-10 px-5">
+    <img class="news-empty__img w-100 mb-10" src="img/news-empty.png" alt="">
+    <div class="text-subtitle-2 text-md-h4 text-lg-h1 text--center lh-1-5">
+      There is no news with the hashtag you’ve selected, <br class="d-none d-lg-block">
+      please choose another one.
     </div>
-
-    <div class="pagination flex flex-align-center gap-1 gap-md-3">
-      <a class="pagination__btn pagination__btn--disabled btn btn--white btn--fill radius-2 p-0" href="">
-        <svg class="icon text-small-1 text-md-body-2">
-          <use xlink:href="img/icons.svg#to-left" />
-        </svg>
-      </a>
-      <a class="pagination__btn pagination__btn--active btn btn--primary btn--fill text--regular p-0" href="">1</a>
-      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">2</a>
-      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">3</a>
-      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">4</a>
-      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">5</a>
-      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">...</a>
-      <a class="pagination__btn btn btn--primary color-text text--regular p-0" href="">10</a>
-      <a class="pagination__btn btn btn--white btn--fill radius-2 p-0" href="">
-        <svg class="icon text-small-1 text-md-body-2">
-          <use xlink:href="img/icons.svg#to-right" />
-        </svg>
-      </a>
-    </div>
+  </div>
 
 </section>
 

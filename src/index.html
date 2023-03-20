@@ -258,6 +258,7 @@
       slidesPerView: 'auto',
       watchSlidesProgress: true,
       grabCursor: true,
+      loop: false,
       navigation: {
         nextEl: '.expo-slider .slider-next',
         prevEl: '.expo-slider .slider-prev'
@@ -265,6 +266,15 @@
       pagination: {
         el: '.expo-slider .slider-pagination',
         clickable: true
+      },
+      breakpoints: {
+
+        2000: {
+
+          loop: true
+
+        }
+
       }
     })
   </script>

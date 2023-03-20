@@ -358,6 +358,18 @@ body {
 		}
 	}
 
+	@media(min-width: 2000px) {
+		&-swiper {
+			overflow: hidden;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+	}
+
 	@media(max-width: $md) {
 		&-swiper {
 

@@ -1276,16 +1276,32 @@ body {
 }
 
 .filter {
-	&__items {
-		display              : grid;
-		grid-template-columns: repeat(4, 1fr);
-	}
-
 	&__item {
+		transition: 0.2s;
+
+		&::after {
+			content         : "";
+			position        : absolute;
+			left            : 0;
+			right           : 0;
+			bottom          : 0;
+			width           : 100%;
+			height          : 3px;
+			background-color: var(--color-primary);
+			transition      : 0.2s;
+			opacity         : 0;
+			visibility      : hidden;
+		}
+
 		&--active {
 			font-weight: bold;
 			opacity    : 1;
 			color      : var(--color-primary);
+
+			&::after {
+				opacity   : 1;
+				visibility: visible;
+			}
 		}
 	}
 
@@ -1295,29 +1311,13 @@ body {
 		}
 	}
 
-	&__line {
-		left  : 0;
-		bottom: 0;
-		height: 3px;
-	}
+	&-slider {
+		&-btn {
+			width : 48px;
+			height: 48px;
 
-	@media(max-width: $lg) {
-		&__items {
-			background-color     : var(--color-white);
-			grid-template-columns: 1fr;
-
-			border: {
-				bottom: none;
-				radius: 16px;
-			}
-		}
-
-		&__item {
-			color: var(--color-primary);
-
-			&--active {
-				color           : var(--color-white);
-				background-color: var(--color-primary);
+			&.swiper-button-disabled {
+				display: none !important;
 			}
 		}
 	}
@@ -1382,6 +1382,12 @@ body {
 			height         : 54px;
 			background     : #DFE6EE url('../img/user.svg') no-repeat center;
 			background-size: 36px;
+		}
+
+		&__btn {
+			background: #D85054;
+			max-width : 210px;
+			cursor    : pointer;
 		}
 	}
 

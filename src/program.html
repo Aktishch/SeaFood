@@ -12,13 +12,39 @@
 <section class="page-block overflow-hidden">
 
   <div class="filter mb-5 mb-md-10 pb-5 pb-md-10 -filter-">
-    <div class="filter__items relative overflow-hidden border-bottom pb-lg-4">
-      <div class="filter__item filter__item--active flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor p-4 p-lg-0 -filter-item-" data-filter="filter__card--1">17 october (Day 0)</div>
-      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor p-4 p-lg-0 -filter-item-" data-filter="filter__card--2">18 October (Day 1)</div>
-      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor p-4 p-lg-0 -filter-item-" data-filter="filter__card--3">19 october (Day 2)</div>
-      <div class="filter__item flex-grow text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor p-4 p-lg-0 -filter-item-" data-filter="filter__card--4">20 october (Day 3)</div>
-      <span class="filter__line d-none d-lg-block absolute bg-primary radius-2 linear duration-3 -filter-line-"></span>
+    <div class="filter-slider slider relative border-bottom">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="filter__item filter__item--active swiper-slide grid-col-8 grid-col-md-5 grid-col-lg-3 relative text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor pb-4 -filter-item-" data-filter="filter__card--1">17 october (Day 0)</div>
+          <div class="filter__item swiper-slide grid-col-8 grid-col-md-5 grid-col-lg-3 relative text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor pb-4 -filter-item-" data-filter="filter__card--2">18 October (Day 1)</div>
+          <div class="filter__item swiper-slide grid-col-8 grid-col-md-5 grid-col-lg-3 relative text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor pb-4 -filter-item-" data-filter="filter__card--3">19 October (Day 2)</div>
+          <div class="filter__item swiper-slide grid-col-8 grid-col-md-5 grid-col-lg-3 relative text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor pb-4 -filter-item-" data-filter="filter__card--4">20 October (Day 3)</div>
+          <div class="filter__item swiper-slide grid-col-8 grid-col-md-5 grid-col-lg-3 relative text-body-0 text-md-subtitle-1 text--regular text--uppercase text--center fade-80 cursor pb-4 -filter-item-" data-filter="filter__card--5">21 October (Day 4)</div>
+        </div>
+      </div>
+      <button class="filter-slider-btn slider-btn slider-prev btn btn--white btn--fill d-none d-md-flex radius-max p-0">
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#to-left" />
+        </svg>
+      </button>
+      <button class="filter-slider-btn slider-btn slider-next btn btn--white btn--fill d-none d-md-flex radius-max p-0">
+        <svg class="icon">
+          <use xlink:href="img/icons.svg#to-right" />
+        </svg>
+      </button>
     </div>
+
+    <script>
+      new Swiper('.filter-slider .swiper', {
+        slidesPerView: 'auto',
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: '.filter-slider .slider-next',
+          prevEl: '.filter-slider .slider-prev'
+        },
+      })
+    </script>
+    
     <div class="materials mt-5 mt-md-10 pt-5 pt-md-10">
       <div class="filter__card filter__card--1 -filter-card-">
 
@@ -81,6 +107,12 @@
                     </svg>
                   </button>
                 </div>
+                <button class="materials-info__btn flex flex-align-center flex-justify-center color-white text--demibold radius-2 w-100 mt-4 py-3 px-4">
+                  <svg class="icon text-h3">
+                    <use xlink:href="img/icons.svg#play" />
+                  </svg>
+                  Online
+                </button>
               </div>
               <div class="grid-col-lg-9">
                 <div class="text-body-0 text-md-subtitle-1 text--uppercase text--bold lh-1-5 mb-2">GLOBAL FISHERY FORUM PLENARY SESSION ‘SMART FISHING: RESEARCH, CATCHING, PROCESSING’</div>
@@ -96,37 +128,37 @@
                     <div class="text-body-2 text-md-body-1 lh-1-5">
                       An invitation to take part is extended to event organisers and participants, representatives of Russian ministries and departments, foreign delegations, heads of associations and unions, fishing and fish-processing companies
                     </div>
-                  </div>
-                </div>
-                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">SPEAKERS:</div>
-                <div class="mb-6">
-                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
-                    <% for (var i = 0; i < 9; i++) { %>
-                      <div class="grid-col-md-6">
-                        <div class="flex flex-align-center link-hover-wrapper" data-fancybox-modal data-src="dialog-person.html" data-type="ajax">
-                          <div class="materials-info__pic pic pic--square radius-max mr-3">
-                            <img class="pic__img" src="img/personal/person-11.png" alt="">
+                    <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">SPEAKERS:</div>
+                    <div class="mb-6">
+                      <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                        <% for (var i = 0; i < 9; i++) { %>
+                          <div class="grid-col-md-6">
+                            <div class="flex flex-align-center link-hover-wrapper" data-fancybox-modal data-src="dialog-person.html" data-type="ajax">
+                              <div class="materials-info__pic pic pic--square radius-max mr-3">
+                                <img class="pic__img" src="img/personal/person-11.png" alt="">
+                              </div>
+                              <div class="flex flex-column">
+                                <div class="text-body-1 text--bold link-hover mb-1">Dmitry Patrushev</div>
+                                <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="flex flex-column">
-                            <div class="text-body-1 text--bold link-hover mb-1">Dmitry Patrushev</div>
-                            <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
-                          </div>
-                        </div>
+                        <% } %>
                       </div>
-                    <% } %>
-                  </div>
-                </div>
-                <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">MODERATOR:</div>
-                <div class="mb-6">
-                  <div class="grid grid-spacing-5 grid-spacing-lg-7">
-                    <div class="grid-col-md-6">
-                      <div class="flex flex-align-center">
-                        <div class="materials-info__pic pic pic--square radius-max mr-3">
-                          <img class="pic__img" src="img/personal/person-11.png" alt="">
-                        </div>
-                        <div class="flex flex-column">
-                          <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
-                          <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                    </div>
+                    <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">MODERATOR:</div>
+                    <div class="mb-6">
+                      <div class="grid grid-spacing-5 grid-spacing-lg-7">
+                        <div class="grid-col-md-6">
+                          <div class="flex flex-align-center">
+                            <div class="materials-info__pic pic pic--square radius-max mr-3">
+                              <img class="pic__img" src="img/personal/person-11.png" alt="">
+                            </div>
+                            <div class="flex flex-column">
+                              <div class="text-body-1 text--bold mb-1">Dmitry Patrushev</div>
+                              <div class="text-small-1 fade-60">Minister of Agriculture of the Russian Federation</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -755,6 +787,9 @@
         fdfsdfsdfsdfsdfds
       </div>
       <div class="filter__card filter__card--4 d-none -filter-card-">
+        fdfsdfsdfsdfsdfds
+      </div>
+      <div class="filter__card filter__card--5 d-none -filter-card-">
         fdfsdfsdfsdfsdfds
       </div>
     </div>

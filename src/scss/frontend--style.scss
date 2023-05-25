@@ -1395,6 +1395,10 @@ body {
 			padding-inline: 15px;
 			margin-inline : -15px;
 		}
+
+		&__organizers {
+			min-width: max-content;
+		}
 	}
 
 	@media(max-width: $md) {
@@ -1406,6 +1410,12 @@ body {
 		&__item {
 			flex-direction: column;
 			align-items   : flex-start;
+		}
+
+		&-info {
+			&__images {
+				flex-wrap: nowrap;
+			}
 		}
 	}
 }

@@ -14,6 +14,7 @@ import search from './search';
 import copyLink from './copy-link';
 import bxPanel from './bx-panel';
 import videoPlay from './video-play';
+import scrollHeader from './scroll-header';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
 import '../scss/index.scss';
@@ -46,5 +47,6 @@ function loadHandler() {
 	copyLink.init()
 	bxPanel.init()
 	videoPlay.init()
+	scrollHeader.init()
 
 }

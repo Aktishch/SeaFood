@@ -1401,10 +1401,27 @@ body {
 		}
 	}
 
-	@media(max-width: $md) {
+	@media(max-width: $lg) {
 		&__head {
 			flex-direction : column;
-			justify-content: center;
+			justify-content: flex-start;
+			align-items: flex-start;
+
+			&-title {
+				order: 2;
+			}
+
+			&-btns {
+				order: 1;
+			}
+		}
+	}
+
+	@media(max-width: $md) {
+		&__btn {
+			width: auto;
+			font-size: 12px;
+			height: 35px;
 		}
 
 		&__item {

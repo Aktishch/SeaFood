@@ -165,28 +165,12 @@
                   </div>
                 </div>
                 <div class="text-body-1 text-md-subtitle-2 text--uppercase text--bold lh-1-5 mb-4">ORGANIZERS:</div>
-                <div class="materials-info__images flex flex-wrap flex-align-center gap-4 gap-md-8 overflow-auto">
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
-                  <a class="materials-info__organizers" href="">
-                    <img class="w-max" src="img/organizers/agency.png" alt="">
-                  </a>
+                <div class="materials-info__images overflow-auto">
+                  <% for (var i = 0; i < 9; i++) { %>
+                    <div class="materials-info__pack pic pic--square">
+                      <img class="pic__img pic__img--sd" src="img/organizers/agency.png" alt="">
+                    </div>
+                  <% } %>
                 </div>
               </div>
             </div>

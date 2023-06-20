@@ -1391,11 +1391,11 @@ body {
 			cursor: pointer;
 		}
 
-		&__images {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			grid-gap: 20px;
-		}
+		// &__images {
+		// 	display: grid;
+		// 	grid-template-columns: repeat(4, 1fr);
+		// 	grid-gap: 20px;
+		// }
 
 		&__organizers {
 			min-width: max-content;
@@ -1417,11 +1417,11 @@ body {
 			}
 		}
 
-		&-info {
-			&__images {
-				grid-template-columns: repeat(3, 1fr);
-			}
-		}
+		// &-info {
+		// 	&__images {
+		// 		grid-template-columns: repeat(3, 1fr);
+		// 	}
+		// }
 	}
 
 	@media(max-width: $md) {
@@ -1438,8 +1438,9 @@ body {
 
 		&-info {
 			&__images {
-				display: flex;
-				align-items: center;
+				// display: flex;
+				// align-items: center;
+				flex-wrap: nowrap;
 				padding-inline: 15px;
 				margin-inline: -15px;
 			}

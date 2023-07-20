@@ -685,6 +685,12 @@ body {
 		}
 	}
 
+	&-description {
+		p {
+			margin-bottom: 20px;
+		}
+	}
+
 	@media(hover) {
 		&__card:hover &__image {
 			transform: scale(1.1);

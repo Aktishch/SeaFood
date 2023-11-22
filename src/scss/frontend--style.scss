@@ -1711,3 +1711,19 @@ body {
 		}
 	}
 }
+
+.current-year {
+	@media (min-width: $lg) {
+		margin-bottom: 60px;
+	}
+
+	&__btn {
+		border-color: #d7d7d7;
+	}
+
+	&__content {
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
+}

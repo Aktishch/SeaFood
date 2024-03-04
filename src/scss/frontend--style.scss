@@ -1034,6 +1034,10 @@ body {
 		height: 60px;
 	}
 
+	&-slider .slider-btn.swiper-button-disabled {
+		display: none !important;
+	}
+
 	@media(max-width: $md) {
 		&-block {
 			min-height: 300px;

@@ -1731,3 +1731,28 @@ body {
 		right: 0;
 	}
 }
+
+.exhibit {
+	&__number {
+		max-width: 110px;
+		height: 130px;
+		background-image: linear-gradient(180deg, var(--color-blue-10) 0%, transparent 100%);
+	}
+
+	@media (max-width: $md) {
+		&__item {
+			align-items: flex-start;
+		}
+
+		&__number {
+			max-width: 70px;
+    		height: 80px;
+		}
+	}
+
+	@media (min-width: $md) {
+		&__number {
+			font-size: 64px;
+		}
+	}
+}

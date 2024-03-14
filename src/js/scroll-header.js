@@ -13,7 +13,10 @@ const init = () => {
     const currentOffsetTop = scrolledPage.init().top
     const headerHeight = header.offsetHeight
 
-    prevOffsetTop > currentOffsetTop ? header.style.setProperty('--top', '0') : header.style.setProperty('--top', `-${headerHeight}px`)
+    if (headerHeight < currentOffsetTop) {
+      prevOffsetTop > currentOffsetTop ? header.style.setProperty('--top', '0') : header.style.setProperty('--top', `-${headerHeight}px`)
+    }
+
 
     prevOffsetTop = currentOffsetTop
 

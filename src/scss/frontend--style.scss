@@ -104,10 +104,13 @@ body {
 	right: 0;
 	background-color: var(--color-white-60);
 	backdrop-filter: blur(4px);
-	transform: translateY(var(--top));
 
 	&__logo {
 		width: 150px;
+	}
+
+	@media(min-width: $lg) {
+		transform: translateY(var(--top));
 	}
 
 	@media(max-width: $lg) {

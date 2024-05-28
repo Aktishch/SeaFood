@@ -390,9 +390,7 @@ body {
 
 	@media(min-width: 2000px) {
 		&-swiper {
-			&:not(&--visible) {
-				overflow: hidden;
-			}
+			overflow: hidden;
 
 			&::before,
 			&::after {

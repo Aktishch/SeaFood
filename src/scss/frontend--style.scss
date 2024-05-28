@@ -390,7 +390,9 @@ body {
 
 	@media(min-width: 2000px) {
 		&-swiper {
-			overflow: hidden;
+			&:not(&--visible) {
+				overflow: hidden;
+			}
 
 			&::before,
 			&::after {
@@ -1753,7 +1755,7 @@ body {
 
 		&__number {
 			max-width: 70px;
-    		height: 80px;
+			height: 80px;
 		}
 	}
 
